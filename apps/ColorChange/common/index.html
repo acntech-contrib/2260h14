@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+    	<head>
+    		<meta charset="UTF-8">
+    		<title>ColorChange</title>
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    		<!--
+    			<link rel="shortcut icon" href="images/favicon.png">
+    			<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    		-->
+    		<link rel="stylesheet" href="css/main.css">
+    		<script>window.$ = window.jQuery = WLJQ;</script>
+    	</head>
+    	<body style="display: none;">
+    		<!--application UI goes here-->
+    		<!-- Here is the header -->
+    		<div id="header">
+    			<div id="headerwrapper" onclick = "changeColor();">
+    			
+ 					<img src="images/Arrow1-liten.png" id="arrow"/>
+    				<div id="myPicture">
+						<div id="myLocation"></div>
+						<div id="myStatus"></div>
+					</div>
+	    		</div>
+    			<ul id="option-menu">
+	    			<li id="greenRadio" onclick="setAvailable();">
+	    				Available
+	    			</li>
+	    			<li id="redRadio" onclick="setBusy();">
+	    				Busy
+	    			</li>
+	    			<li id="grayRadio" onclick="setIncognito();">
+	    				Incognito
+	    			</li>
+	    		</ul>
+    		</div>
+    		<div id="wrapper">
+    			<!-- Placeholder for dynamic content -->
+    			<div id="pagePort"></div>
+    		</div>
+    		<script src="js/initOptions.js"></script>
+    		<script src="js/main.js"></script>
+    		<script src="js/messages.js"></script>
+    	</body>
+</html>

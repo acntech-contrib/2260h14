@@ -1,0 +1,43 @@
+#page {
+	background-color: rgb(255, 255, 255);
+}
+
+#map {
+	position: relative;
+	z-index: -1;
+}
+
+.divOpener {
+	list-style-type: none;
+}
+
+.rooms {
+	position: absolute;
+	z-index: 2;
+	margin-left: 10%;
+	height: 50px;
+	width: 50px;
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+}
+
+#Ada {
+	margin-top: 55%;
+	/*LEFT adjusment*/
+}
+
+#C {
+	margin-top: 280%;
+	/*LEFT adjusment*/
+}
+
+#Euclid {
+	margin-top: 550%;
+	/*LEFT adjusment*/
+}
+
+#picMap {
+	width: 100%;
+	height: auto;
+	margin-top: 10%;
+}

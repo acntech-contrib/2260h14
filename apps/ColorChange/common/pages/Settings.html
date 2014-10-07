@@ -1,0 +1,13 @@
+<script>
+	$.getScript(path + "js/Settings.js");
+	$('<link/>', {
+   	rel: 'stylesheet',
+   	type: 'text/css',
+   	href: 'css/settings.css'
+	}).appendTo('body');
+</script>
+<div id="page">
+	<div id="settingProfile">Select your profile here:
+		<select id="profilePicker" onchange="changeProfile()"></select>
+	</div>
+</div>

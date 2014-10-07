@@ -1,0 +1,175 @@
+body {
+	margin: 0;
+	font-family: sans-serif;
+	background-color: rgb(255, 255, 255);
+}
+
+#header {
+	background-color: rgb(102, 193, 170); /*rgb(0,122,255); - "iOS-blue"*/
+	color: #F9FAFB;
+	font-size: 16px;
+	height: 60px;
+	line-height: 0px;
+	position: fixed;
+	width: 100%;
+}
+
+#headerwrapper {
+	height: 45px;
+	line-height: 0px;
+	position: fixed;
+	width: 100%;
+}
+
+
+#myPicture {
+	position: fixed;
+	margin: 10px;
+	height: 40px;
+	width: 40px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	/*background: url(http://www.lifetimetv.co.uk/sites/default/files/styles/max360/public/assets/square/Steven%20Seagal.jpg?itok=PwBEpoYp) no-repeat;*/
+	background: url(https://s3-eu-west-1.amazonaws.com/meetin/default.jpg);
+	background-size: contain;
+}
+
+#myInfo {
+	list-style-type: none;
+}
+#beacon-list {
+	margin: 100px;
+	line-height: 20px;
+	font-size: 15px;
+	text-align: center;
+}
+#myName {
+	line-height: 15px;
+	text-indent: 45px;
+	font-size: 13px;
+}
+
+#myLocation {
+	padding: 5px 0 0 0;
+	line-height: 15px;
+	text-indent: 45px;
+	font-size: 13px;
+	font-weight:bold;
+}
+
+#myStatus {
+	line-height: 15px;
+	text-indent: 45px;
+	font-size: 13px;
+	font-weight:bold;
+}
+
+
+#profilePic {
+	padding: 10px 0 0 5px;
+	margin: 20;
+	float: left;
+}
+
+#location {
+	text-indent:0.7em; /*vänsterjustering*/
+	padding: 8px 0 0 0;
+	text-align: left;
+	line-height: 10px;
+	font-size: 13px;
+}
+
+#status {
+	text-indent:0.7em; /*vänsterjustering*/
+	text-align: left;
+	margin: 20;
+	font-size: 11px;
+	padding: 0 0 20px 0;
+}
+
+#arrow {
+	/*-webkit-transform: rotate(90deg);*/
+	-webkit-transition: 400ms;
+	float: right;
+	margin: 15px 0 0 0;
+}
+
+#page {
+	line-height: 500px;
+	margin: 0;
+	font-size: 18px;
+}
+
+#option-menu {
+	/*position: fixed;
+	float: left;*/
+	visibility: hidden;
+	padding: 0;
+	margin: 20px 0 0 0;
+	/*list-style-position: inside;
+	text-align: left;*/
+}
+
+#greenRadio {
+	font: normal normal normal 1em/1.2em Arial, sans-serif;
+	padding:0.60em 0 0.8em 2.5em; /*flyttaNerText ? avståndNedåt avståndVänster*/
+  	margin-bottom:0.2em;
+  	text-indent:0.4em; /*vänster justering*/
+  	font-weight:bold;
+  	list-style:none;
+  	background-repeat:no-repeat;
+  	/*background-image: url(Green-radio-selected.png);*/
+}
+
+#redRadio {
+	font: normal normal normal 1em/1.2em Arial, sans-serif;
+	padding:0.60em 0 0.8em 2.5em;
+  	margin-bottom:0.2em;
+  	text-indent:0.4em;
+  	font-weight:bold;
+  	list-style:none;
+  	background-repeat:no-repeat;
+  	/*background-image: url(Red-radio.png);*/
+}
+
+#grayRadio {
+	font: normal normal normal 1em/1.2em Arial, sans-serif;
+	padding:0.60em 0 0.8em 2.5em;
+  	margin-bottom:0.2em;
+  	text-indent:0.4em;
+  	font-weight:bold;
+  	list-style:none;
+  	background-repeat:no-repeat;
+  	/*background-image: url(Gray-radio.png);*/
+}
+
+
+#wrapper {
+	text-align: center;
+	width: 90%;
+	margin: auto;
+	padding-top: 38px;
+}
+
+li {
+	text-align: left;
+	/*line-height: 38px;
+	margin: 0 0 38px 0;*/
+}
+
+/* Provide different styling for iOS 7. */
+body.wl_ios7 {
+	padding-top: 0 !important;
+}
+
+.wl_ios7 #header {
+	padding-top: 9px;
+}
+
+.wl_ios7 #option-menu {
+	padding-top: 38px;
+}
+
+.wl_ios7 #wrapper {
+	padding-top: 55px;
+}
