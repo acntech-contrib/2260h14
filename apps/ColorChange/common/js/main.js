@@ -22,8 +22,8 @@ function wlCommonInit(){
 	// Common initialization code goes here
 	
 	//page init
-	$("#pagePort").load(path + "pages/Home.html", function(){
-		$.getScript(path + "js/Home.js", function() {
+	$("#pagePort").load(path + "pages/Settings.html", function(){
+		$.getScript(path + "js/Settings.js", function() {
 			if (currentPage.init) {
 				currentPage.init();
 			}
@@ -63,16 +63,16 @@ function findBeacons() {
 	for(var i=0;i>10;i++) {*/
 		Beacon.rangeForBeacons("B9407F30-F5F8-466E-AFF9-25556B57FE6D")
 		.then(function(beacons_found) {
-		   $("#beacon-list").empty();
+		 //  $("#beacon-list").empty();
 		   var maxRSSI = 100;
 		   var room = "";
 		   for(beaconIndex in beacons_found) {
 		      var beacon = beacons_found[beaconIndex];              
-		      var beaconDiv = $("<div />").html("Major: " + beacon.major + 
+		   /*   var beaconDiv = $("<div />").html("Major: " + beacon.major + 
 		                                         "; Minor: " + beacon.minor + 
 		                                         "; RSSI: " + (beacon.rssi*-1));
 		
-		      $("#beacon-list").append(beaconDiv);
+		      $("#beacon-list").append(beaconDiv);*/
 		      if(beacon.rssi*-1 < maxRSSI) {
 		    	  room = getRoomName(beacon.minor);
 		    	  maxRSSI = beacon.rssi*-1;
@@ -90,15 +90,15 @@ function findBeacons() {
 function getRoomName(minor) {
 	//Blueberry pie
 	if(minor == 2) {
-		return "Auler"; //Ada
+		return "Smalltalk"; //Ada
 	}
 	//Mint coctail
 	else if(minor == 5) {
-		return "Auler"; //C
+		return "Smalltalk"; //C
 	}
 	//Icy marchmallow 
 	else if(minor == 6) {
-		return "Euclid"; //Euclid
+		return "Smalltalk"; //Euclid
 	}
 }
 

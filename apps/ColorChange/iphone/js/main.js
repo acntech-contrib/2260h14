@@ -8,13 +8,13 @@ function wlEnvInit(){
 function tabBarInit() {
 	 WL.TabBar.init();
 	    
-	    //Add item "Home" to tabBar
-	    WL.TabBar.addItem("Home",
+	//Add item "Home" to tabBar
+	    WL.TabBar.addItem("Meet",
 	    	function () {
-	    		WL.Logger.debug("Home :: pressed");
-	    		$("#pagePort").load(path + "pages/Home.html");
+	    		WL.Logger.debug("Meet :: pressed");
+	    		$("#pagePort").load(path + "pages/Meet.html");
 	    	}
-	    , "Home", {/*image: "tabButton:Favorites",*/ image: "images/home-25.png"});
+	    , "MeetIn's", {/*image: "tabButton:Favorites",*/ image: "images/date_to-25.png"});
 	    
 	  //Add item "Friends" to tabBar
 	    WL.TabBar.addItem("Friends",

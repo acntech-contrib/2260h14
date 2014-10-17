@@ -28,7 +28,13 @@ $.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 
 function showOnMap(contactNumber) {
 	WL.Logger.debug("Map :: pressed");
-	$("#pagePort").load(path + "pages/Map.html");
+	$("#pagePort").load(path + "pages/Map.html", function(){
+		$.getScript(path + "js/Map.js", function() {
+			if (currentPage.init) {
+				currentPage.init();
+			}
+		});
+	});
 	var userClicked = document.getElementById("contact"+contactNumber+"Name").innerHTML;
 	displayUser(userClicked);
 }
