@@ -1,7 +1,7 @@
 currentPage = {};
 $('html, body').animate({ scrollTop: 0}, 0);
 currentPage.init = function() {
-	WL.Logger.debug("Friends :: init");
+	WL.Logger.debug("SelectFriends :: init");
 };
 
 //Read jSON data from web
@@ -35,21 +35,3 @@ $.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 		}	
 	}
 });
-
-function showOnMap(contactNumber) {
-	WL.Logger.debug("Map :: pressed");
-	$("#pagePort").load(path + "pages/Map.html", function(){
-		$.getScript(path + "js/Map.js", function() {
-			if (currentPage.init) {
-				currentPage.init();
-			}
-		});
-	});
-	var userClicked = document.getElementById("contact"+contactNumber+"Name").innerHTML;
-	displayUser(userClicked);
-}
-
-currentPage.add = function() {
-	//add friend
-	alert("Add friend!");
-};

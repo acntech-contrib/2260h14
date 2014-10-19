@@ -33,3 +33,8 @@ function displayUser(userShow) {
 		}
 	});
 }
+
+currentPage.add = function() {
+	//add map?
+	alert("Add map!");
+};

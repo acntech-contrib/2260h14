@@ -35,3 +35,8 @@ function changeProfile() {
 	});
 	user = thisUser;
 }
+
+currentPage.add = function() {
+	//Do nothing
+	alert("Setting add!");
+};

@@ -2,10 +2,11 @@
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
-	margin-top: 15px;
+	padding-top: 15px;
 }
 
 .meetingList {
+	margin: 0;
 	background-color: rgb(255, 255, 255);
 	border-bottom-style: solid;
 	border-bottom-color: rgb(210, 210, 210);
@@ -17,15 +18,24 @@
 	white-space: nowrap;
 }
 
-.meetingLocation {
-	text-indent: 15px; /*vänsterjustering*/
-	text-align: left;
-	font-size: 13px;
+.meetExtension {
+	margin: 0;
+	padding-top: 10px;
+	height: 0;
+	line-height: 0;
+	-webkit-trasition: 400ms;
+	display: none;
+	background-color: rgb(255, 255, 255);
+	border-bottom-style: solid;
+	border-bottom-color: rgb(210, 210, 210);
+	border-bottom-width: 2px;
 }
 
 .meetingInfo {
-	text-indent: 15px;
+	margin: 0;
+	/*text-indent: 15px;*/
 	font-size: 13px;
+	padding: 0 0 0 15px;
 }
 
 .allMeetingInfo {
@@ -48,8 +58,40 @@
 }
 
 .dots {
+	right: 0;
+	padding: 10px 20px 0 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.settingTime {
+	margin: 0;
+	padding: 5px 0 0 20px;
+}
+
+.timePicker {
+	margin-left: 14px;
+}
+
+.settingRoom {
+	margin: 0;
+	padding: 5px 0 0 20px;
+}
+
+.slettBtn {
+	margin: 0;
+	float: left;
+	padding: 15px 0 0 20px;
+	font-weight:bold;
+	color: rgb(240, 128, 128);
+}
+
+.okBtn {
+	margin: 0;
 	float: right;
-	margin: 10px 0 0 0;
+	padding: 15px 20px 0 0;
+	font-weight:bold;
+	color: rgb(102, 193, 170);
 }
 
 /* Provide different styling for iOS 7. */

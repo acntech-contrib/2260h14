@@ -12,6 +12,7 @@ body {
 	line-height: 0px;
 	position: fixed;
 	width: 100%;
+	z-index: 1;
 }
 
 #headerwrapper {

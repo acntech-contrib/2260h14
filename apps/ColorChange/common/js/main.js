@@ -199,5 +199,5 @@ function newLocation(location) {
 }
 
 function add() {
-	
+	currentPage.add();
 }
