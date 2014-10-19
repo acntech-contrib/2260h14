@@ -90,15 +90,15 @@ function findBeacons() {
 function getRoomName(minor) {
 	//Blueberry pie
 	if(minor == 2) {
-		return "Smalltalk"; //Ada
+		return "Ada"; //Ada
 	}
 	//Mint coctail
 	else if(minor == 5) {
-		return "Smalltalk"; //C
+		return "C"; //C
 	}
 	//Icy marchmallow 
 	else if(minor == 6) {
-		return "Smalltalk"; //Euclid
+		return "Euclid"; //Euclid
 	}
 }
 
@@ -196,4 +196,8 @@ function newLocation(location) {
 			}
 		}
 	});
+}
+
+function add() {
+	
 }

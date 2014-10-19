@@ -2,7 +2,54 @@
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
-	margin-top: 2px;
+	margin-top: 15px;
+}
+
+.meetingList {
+	background-color: rgb(255, 255, 255);
+	border-bottom-style: solid;
+	border-bottom-color: rgb(210, 210, 210);
+	border-bottom-width: 2px;
+	height: 60px;
+	padding-top: 10px;
+	line-height: 20px;
+	visibility: hidden;
+	white-space: nowrap;
+}
+
+.meetingLocation {
+	text-indent: 15px; /*vänsterjustering*/
+	text-align: left;
+	font-size: 13px;
+}
+
+.meetingInfo {
+	text-indent: 15px;
+	font-size: 13px;
+}
+
+.allMeetingInfo {
+	list-style-type: none;
+}
+
+.meetingPicture {
+	height: 50px;
+	width: 50px;
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+	background-image: url(https://s3-eu-west-1.amazonaws.com/meetin/default.jpg);
+	background-size: contain;
+}
+
+#meeting10 {
+	border-bottom-style: none;
+	border-bottom-color: none;
+	border-bottom-width: none;
+}
+
+.dots {
+	float: right;
+	margin: 10px 0 0 0;
 }
 
 /* Provide different styling for iOS 7. */

@@ -42,30 +42,3 @@ function tabBarInit() {
 	    
 	    WL.TabBar.setVisible(true);
 }
-/*
-Beacon = function() {
-    return {
-        rangeForBeacons: function(uuid, range_result_callback, range_failure_callback) {
-            var dfd = WLJQ.Deferred();
-            cordova.exec(dfd.resolve, dfd.reject, "BeaconPlugin","range", [uuid]);
-            return dfd.promise();
-        }
-    };
-}();
-
-//This example uses the Estimote UUID. Change as needed
-Beacon.rangeForBeacons("B9407F30-F5F8-466E-AFF9-25556B57FE6D")
-      .then(function(beacons_found) {
-         $("#beacon-list").empty();
-         for(beaconIndex in beacons_found) {
-            var beacon = beacons_found[beaconIndex];              
-            var beaconDiv = $("<div />").html("Major: " + beacon.major + 
-                                               "; Minor: " + beacon.minor + 
-                                               "; RSSI: " + beacon.rssi);
-
-            $("#beacon-list").append(beaconDiv);
-          }
-    })
-    .fail(function() {
-          alert("failed!");
-    });*/

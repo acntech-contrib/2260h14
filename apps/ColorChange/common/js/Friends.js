@@ -12,6 +12,7 @@ $.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 		var contactName = contact.concat("Name");
 		var contactLocation = contact.concat("Location");
 		var contactStatus = contact.concat("Status");
+		
 		$(contactName).text(data[i].username);
 		$(contactLocation).text(data[i].beaconid);
 		$(contactStatus).text(data[i].userstatus);
@@ -21,8 +22,17 @@ $.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 		var profilepic = ""+data[i].profilepic;
 		var urlUser = url.concat(profilepic);
 		var urlString = urlUser.concat(".jpg)");
+		
 		$(contactPicture).css("background", urlString);
 		$(contactPicture).css("background-size", "contain");
+		
+		$(contact).css("visibility", "visible");
+		
+		if(n == data.length) {
+			$(meeting).css("border-bottom-style", "none");
+			$(meeting).css("border-bottom-color", "none");
+			$(meeting).css("border-bottom-width", "none");
+		}	
 	}
 });
 
