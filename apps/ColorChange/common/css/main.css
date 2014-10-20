@@ -90,12 +90,16 @@ body {
 
 #arrow {
 	/*-webkit-transform: rotate(90deg);*/
+	max-height: 30px;
+	max-width: auto;
 	-webkit-transition: 400ms;
 	float: right;
 	margin: 15px 0 0 0;
 }
 
 #plus {
+	max-height: 30px;
+	max-width: auto;
 	float: right;
 	margin: 15px 0 0 0;
 }
@@ -163,6 +167,25 @@ li {
 	margin: 0 0 38px 0;*/
 }
 
+/*Alternativ header: */
+ #back {
+ 	max-height: 30px;
+	max-width: auto;
+	float: left;
+	padding: 15px 0 0 10px;
+	
+	display: none;
+ }
+ 
+  #ok {
+	float: right;
+	padding: 30px 15px 0 0;
+	font-weight: bold;
+	font-size: 20px;
+	
+	display: none;
+ }
+ 
 /* Provide different styling for iOS 7. */
 body.wl_ios7 {
 	padding-top: 0 !important;

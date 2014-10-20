@@ -201,3 +201,33 @@ function newLocation(location) {
 function add() {
 	currentPage.add();
 }
+
+function transformHeader() {
+	$("#plus").css("display", "none");
+	$("#arrow").css("display", "none");
+	$("#myPicture").css("display", "none");
+	$("#myLocation").css("display", "none");
+	$("#myStatus").css("display", "none");
+	
+	$("#back").css("display", "block");
+	$("#ok").css("display", "block");
+}
+
+function restoreHeader() {
+	$("#back").css("display", "none");
+	$("#ok").css("display", "none");
+	
+	$("#plus").css("display", "block");
+	$("#arrow").css("display", "block");
+	$("#myPicture").css("display", "block");
+	$("#myLocation").css("display", "block");
+	$("#myStatus").css("display", "block");
+}
+
+function back() {
+	currentPage.back();
+}
+
+function next() {
+	currentPage.next();
+}

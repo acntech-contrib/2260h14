@@ -1,0 +1,14 @@
+<script>
+	$.getScript(path + "js/SelectRoom.js");
+	$('<link/>', {
+   	rel: 'stylesheet',
+   	type: 'text/css',
+   	href: 'css/SelectRoom.css'
+	}).appendTo('body');
+</script>
+<div id="selectMap">
+	<img src="images/RoomTag1.jpg" id="selectAda" onclick = "selectEuclid();"/>
+	<img src="images/RoomTag2.jpg" id="selectC" onclick = "selectC();"/>
+	<img src="images/RoomTag3.jpg" id="selectEuclid" onclick = "selectAda();"/>
+	<img src="images/Kart.png" id="selectPicMap"/>
+ </div>

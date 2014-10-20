@@ -11,6 +11,7 @@ function tabBarInit() {
 	//Add item "Home" to tabBar
 	    WL.TabBar.addItem("Meet",
 	    	function () {
+	    		restoreHeader();
 	    		WL.Logger.debug("Meet :: pressed");
 	    		$("#pagePort").load(path + "pages/Meet.html");
 	    	}
@@ -19,6 +20,7 @@ function tabBarInit() {
 	  //Add item "Friends" to tabBar
 	    WL.TabBar.addItem("Friends",
 	    	function () {
+	    		restoreHeader();
 	    		WL.Logger.debug("Friends :: pressed");
 	    		$("#pagePort").load(path + "pages/Friends.html");
 	    	}
@@ -27,6 +29,7 @@ function tabBarInit() {
 	  //Add item "Map" to tabBar
 	    WL.TabBar.addItem("Map",
 	    	function () {
+	    		restoreHeader();
 	    		WL.Logger.debug("Map :: pressed");
 	    		$("#pagePort").load(path + "pages/Map.html");
 	    	}
@@ -35,6 +38,7 @@ function tabBarInit() {
 	  //Add item "Other" to tabBar
 	    WL.TabBar.addItem("Settings",
 	    	function () {
+	    		restoreHeader();
 	    		WL.Logger.debug("Settings :: pressed");
 	    		$("#pagePort").load(path + "pages/Settings.html");
 	    	}

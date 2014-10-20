@@ -88,6 +88,7 @@ function editMeeting(n) {
 		$(visibleExtension).css("display", "none");
 		$(visibleExtension).css("height", "0px");
 		$(extension).css("height", "120px");
+		$(extension).css("line-height", "20px");
 		$(extension).css("display", "block");
 		visibleExtension = extension;
 	}
@@ -96,6 +97,7 @@ function editMeeting(n) {
 currentPage.add = function() {
 	//add meetin
 	WL.Logger.debug("addMeetIn :: pressed");
+	pageHistory.push(path + "pages/Meet.html");
 	$("#pagePort").load(path + "pages/SelectFriends.html");
 };
 

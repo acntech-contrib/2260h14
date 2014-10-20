@@ -1,0 +1,40 @@
+#selectMap {
+	position: relative;
+	z-index: 0;
+}
+
+#selectAda {
+	position: absolute;
+	z-index: 2;
+	margin-left: 2%;
+	max-width: 50%;	
+	padding-top: 42%;
+	max-height: auto;
+	/*LEFT adjusment*/
+}
+
+#selectC {
+	position: absolute;
+	z-index: 2;
+	margin-left: 2%;
+	max-width: 50%;	
+	padding-top: 267%;
+	max-height: auto;
+	/*LEFT adjusment*/
+}
+
+#selectEuclid {
+	position: absolute;
+	z-index: 2;
+	margin-left: 2%;
+	max-width: 50%;	
+	padding-top: 525%;
+	max-height: auto;
+	/*LEFT adjusment*/
+}
+
+#selectPicMap {
+	width: 100%;
+	height: auto;
+	margin-top: 10%;
+}
