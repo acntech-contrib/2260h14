@@ -4,6 +4,17 @@ currentPage.init = function() {
 	WL.Logger.debug("Map :: init");
 };
 
+currentPage.add = function() {
+	//add map?
+	alert("Add map!");
+};
+
+currentPage.back = function() {
+	restoreHeader();
+	WL.Logger.debug("Friends :: pressed");
+	$("#pagePort").load(path + "pages/Friends.html");
+};
+
 function displayUser(userShow) {
 	$.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 		for(var i=0;i<data.length;i++) {
@@ -33,8 +44,3 @@ function displayUser(userShow) {
 		}
 	});
 }
-
-currentPage.add = function() {
-	//add map?
-	alert("Add map!");
-};

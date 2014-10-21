@@ -53,6 +53,7 @@ $.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 
 function showOnMap(contactNumber) {
 	WL.Logger.debug("Map :: pressed");
+	transformHeaderOnLocate();
 	$("#pagePort").load(path + "pages/Map.html", function(){
 		$.getScript(path + "js/Map.js", function() {
 			if (currentPage.init) {

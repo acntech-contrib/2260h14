@@ -199,6 +199,7 @@ function newLocation(location) {
 }
 
 function add() {
+	hideMenu();
 	currentPage.add();
 }
 
@@ -213,9 +214,28 @@ function transformHeader() {
 	$("#ok").css("display", "block");
 }
 
+function transformHeaderOnLocate() {
+	$("#plus").css("display", "none");
+	$("#arrow").css("display", "none");
+	$("#myPicture").css("display", "none");
+	$("#myLocation").css("display", "none");
+	$("#myStatus").css("display", "none");
+	
+	$("#back").css("display", "block");
+}
+
+function transformHeaderOnDone() {
+	$("#ok").text("done");
+}
+
+function restoreHeaderNotDone() {
+	$("#ok").text("ok");
+}
+
 function restoreHeader() {
 	$("#back").css("display", "none");
 	$("#ok").css("display", "none");
+	$("#ok").text("ok");
 	
 	$("#plus").css("display", "block");
 	$("#arrow").css("display", "block");

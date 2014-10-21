@@ -12,8 +12,23 @@ currentPage.back = function() {
 currentPage.next = function() {
 	WL.Logger.debug("SelectRoom :: next");
 	pageHistory.push(path + "pages/SelectRoom.html");
+	transformHeaderOnDone();
 	$("#pagePort").load(path + "pages/SelectTime.html");
 };
+
+selectedRoom = "";
+
+function select(n) {
+	var radioBtn = "#radioBtnRoom"+n;
+	if(selectedRoom == "") {
+		$(radioBtn).attr("src", "images/RadioBoxCheck.png");
+	}
+	else {
+		$(selectedRoom).attr("src", "images/Box.png");
+		$(radioBtn).attr("src", "images/RadioBoxCheck.png");
+	}
+	selectedRoom = radioBtn;
+}
 
 function selectAda() {
 	alert("Ada!");

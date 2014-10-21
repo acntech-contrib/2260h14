@@ -1,0 +1,60 @@
+body {
+	background-color: rgb(235, 240, 235);
+}
+
+.field {
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
+	float: left;
+	text-align: left;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(210, 210, 210);
+	border-bottom-width: 1px;
+	border-left-style: solid;
+	border-left-color: rgb(210, 210, 210);
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-right-color: rgb(210, 210, 210);
+	border-right-width: 1px;
+	
+	font-size: 16px;
+	
+	background-color: rgb(255, 255, 255);
+}
+
+.timePicker {
+	height: 30px;
+	width: 20%;
+	float: right;
+	-webkit-appearance: none;
+	-webkit-box-sizing: border-box;
+    box-sizing: border-box;
+   	border: solid 2px transparent;
+   	
+   	margin-top: 5px;
+   	
+   	font-size: 16px;
+   	color: rgb(180, 180, 180);
+}
+
+#startField {
+	margin-top: 20%;
+	border-top-style: solid;
+	border-top-color: rgb(210, 210, 210);
+	border-top-width: 1px;
+}
+
+#startField {
+	text-indent: 8.5px;
+}
+#endField {
+	text-indent: 8.5px;
+}
+
+#nameBox {
+	font-size: 16px;
+	width: 93%;
+	border: solid 2px transparent;
+	color: rgb(180, 180, 180);
+}

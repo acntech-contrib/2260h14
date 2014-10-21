@@ -6,9 +6,30 @@
    	href: 'css/SelectRoom.css'
 	}).appendTo('body');
 </script>
-<div id="selectMap">
-	<img src="images/RoomTag1.jpg" id="selectAda" onclick = "selectEuclid();"/>
-	<img src="images/RoomTag2.jpg" id="selectC" onclick = "selectC();"/>
-	<img src="images/RoomTag3.jpg" id="selectEuclid" onclick = "selectAda();"/>
-	<img src="images/Kart.png" id="selectPicMap"/>
- </div>
+
+<ul id="rooms">
+	<li class="roomList" id="room1" onclick="select(1)">
+		<img src="images/Box.png" class="radioBtnRoom" id="radioBtnRoom1"/>
+		<img src="images/Ada.png" class ="roomPicture" id="room1Picture" onclick="selectAda();"/>
+		<ul class="allRoomInfo"id="room1Info">
+			<li class="roomInfo" id="room1Building"></li>
+			<li class="roomInfo" id="room1Floor"></li>
+		</ul>
+	</li>
+	<li class="roomList" id="room2" onclick="select(2)">
+		<img src="images/Box.png" class="radioBtnRoom" id="radioBtnRoom2"/>
+		<img src="images/C.png" class ="roomPicture" id="room2Picture" onclick="selectC();"/>
+		<ul class="allRoomInfo"id="room2Info">
+			<li class="roomInfo" id="room2Building"></li>
+			<li class="roomInfo" id="room2Floor"></li>
+		</ul>
+	</li>
+	<li class="roomList" id="room3" onclick="select(3)">
+		<img src="images/Box.png" class="radioBtnRoom" id="radioBtnRoom3"/>
+		<img src="images/Euclid.png" class ="roomPicture" id="room3Picture" onclick="selectEuclid();"/>
+		<ul class="allRoomInfo"id="room3Info">
+			<li class="roomInfo" id="room3Building"></li>
+			<li class="roomInfo" id="room3Floor"></li>
+		</ul>
+	</li>
+</ul>
