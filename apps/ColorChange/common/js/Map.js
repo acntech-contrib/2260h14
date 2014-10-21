@@ -1,5 +1,4 @@
 currentPage = {};
-
 currentPage.init = function() {
 	WL.Logger.debug("Map :: init");
 };
@@ -10,9 +9,16 @@ currentPage.add = function() {
 };
 
 currentPage.back = function() {
-	restoreHeader();
-	WL.Logger.debug("Friends :: pressed");
-	$("#pagePort").load(path + "pages/Friends.html");
+	var backToRoom = path + "pages/SelectRoom.html";
+	var history = pageHistory.pop();
+	if(backToRoom == history) {
+		transformHeader();
+	}
+	else {
+		restoreHeader();
+	}
+	WL.Logger.debug("BackFromMap :: pressed");
+	$("#pagePort").load(history);
 };
 
 function displayUser(userShow) {
@@ -43,4 +49,9 @@ function displayUser(userShow) {
 			}
 		}
 	});
+}
+
+function displayRoom(scroll) {
+	var scrollHeight = $(document).height() * scroll;
+	$('html, body').animate({ scrollTop: scrollHeight }, 200);
 }

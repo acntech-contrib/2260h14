@@ -31,13 +31,22 @@ function select(n) {
 }
 
 function selectAda() {
-	alert("Ada!");
+	transformHeaderOnLocate();
+	pageHistory.push(path + "pages/SelectRoom.html");
+	$("#pagePort").load(path + "pages/Map.html");
+	displayRoom(0);
 }
 
 function selectC() {
-	alert("C!");
+	transformHeaderOnLocate();
+	pageHistory.push(path + "pages/SelectRoom.html");
+	$("#pagePort").load(path + "pages/Map.html");
+	displayRoom(0.3);
 }
 
 function selectEuclid() {
-	alert("Euclid!");
+	transformHeaderOnLocate();
+	pageHistory.push(path + "pages/SelectRoom.html");
+	$("#pagePort").load(path + "pages/Map.html");
+	displayRoom(0.65);
 }

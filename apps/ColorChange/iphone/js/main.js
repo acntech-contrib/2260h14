@@ -32,6 +32,7 @@ function tabBarInit() {
 	    		restoreHeader();
 	    		WL.Logger.debug("Map :: pressed");
 	    		$("#pagePort").load(path + "pages/Map.html");
+	    		displayUser(user);
 	    	}
 	    , "Map", {/*image: "tabButton:Bookmarks",*/ image: "images/map_marker-25.png",});
 	    
