@@ -65,6 +65,7 @@ function hide(n) {
 	var notAttendBtn = "#notAttendBtn"+n;
 	var replyMenu = "#reply-menu"+n;
 	var arrow = "#expandArrow"+n;
+	var inviteList = "#inviteList"+n;
 	
 	$(attendBtn).css("-webkit-transition", "0ms");
 	$(attendBtn).css("visibility", "hidden");
@@ -74,6 +75,9 @@ function hide(n) {
 	
 	$(notAttendBtn).css("visibility", "hidden");
 	$(notAttendBtn).css("-webkit-transition", "0ms");
+	
+	$(inviteList).css("visibility", "hidden");
+	$(inviteList).css("-webkit-transition", "0ms");
 	
 	$(meetIn).css("height", "60");
 	$(replyMenu).css("-webkit-transition", "400ms");
@@ -89,8 +93,9 @@ function expand(n) {
 	var notAttendBtn = "#notAttendBtn"+n;
 	var replyMenu = "#reply-menu"+n;
 	var arrow = "#expandArrow"+n;
+	var inviteList = "#inviteList"+n;
 	
-	$(meetIn).css("height", "300");
+	$(meetIn).css("height", "350");
 	$(replyMenu).css("visibility", "visible");
 	$(arrow).css("-webkit-transform", "rotate(180deg)");
 
@@ -102,10 +107,13 @@ function expand(n) {
 	
 	$(notAttendBtn).css("-webkit-transition", "1200ms");
 	$(notAttendBtn).css("visibility", "visible");
+	
+	$(inviteList).css("-webkit-transition", "1600ms");
+	$(inviteList).css("visibility", "visible");
 }
 
 function deleteMeetIn(n) {
-	
+	alert("Delete meetIn?")
 }
 
 

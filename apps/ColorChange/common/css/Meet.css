@@ -8,6 +8,9 @@ body {
 	witdh: 100%;
 	height: 60px;
 	font-size: 16px;
+	border-top-style: solid;
+	border-top-color: rgb(210, 210, 210);
+	border-top-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: rgb(210, 210, 210);
 	border-bottom-width: 1px;
@@ -92,6 +95,29 @@ body {
   	list-style:none;
   	background-repeat:no-repeat;
   	color: rgb(110, 110, 110);
+}
+
+.inviteList {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	width: 90%;
+	height: 85px;
+	border-top-style: solid;
+	border-top-color: rgb(210, 210, 210);
+	border-top-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(210, 210, 210);
+	border-bottom-width: 1px;
+	border-left-style: solid;
+	border-left-color: rgb(210, 210, 210);
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-right-color: rgb(210, 210, 210);
+	border-right-width: 1px;
+	background-color: rgb(240, 245, 240);
+	opacity: 0.5;
+	visibility: hidden;
 }
 
 /* Provide different styling for iOS 7. */
