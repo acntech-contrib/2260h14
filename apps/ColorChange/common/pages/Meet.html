@@ -6,107 +6,19 @@
    	href: 'css/Meet.css'
 	}).appendTo('body');
 </script>
-<ul id="meetings">
-	<li class="meetingList" id="meeting1" onclick="editMeeting(1)">
-		<img src="images/Dots-liten.png" class="dots"/>
-		<div class ="meetingPicture" id="meeting1Picture">
-			<ul class="allMeetingInfo"id="meeting1Info">
-				<li class="meetingInfo" id="meeting1Name">Name</li>
-				<li class="meetingInfo" id="meeting1Location">Location</li>
-				<li class="meetingInfo" id="meeting1Time">Time</li>
-			</ul>
+<div class="meetIn" id="meetIn1">
+	<img src="images/Cross.png" class="deleteBtn" id="deleteBtn1" onclick = "deleteMeetIn(1);"/>
+	<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow1" onclick = "expandBtnClick(1);"/>
+	<img src="images/Ada.png" class="meetIcon" id="meetIcon1"/>
+	<div class="reply-menu" id="reply-menu1">
+		<div class="attendBtn" id="attendBtn1" onclick="setAttending(1);">
+			Attending
 		</div>
-	</li>
-	<li class="meetExtension" id="meetExtension1">
-		<div class="settingRoom">Rom</div>
-		<div class="settingTime">Tid</div>
-		<div class="slettBtn" id="slettBtn1">Slett</div>
-		<div class="okBtn" id="okBtn1">Ok</div>
-	</li>
-	<li class="meetingList" id="meeting2" onclick="editMeeting(2)">
-		<img src="images/Dots-liten.png" class="dots"/>
-		<div class ="meetingPicture" id="meeting2Picture">
-			<ul class="allMeetingInfo"id="meeting2Info">
-				<li class="meetingInfo" id="meeting2Name">Name</li>
-				<li class="meetingInfo" id="meeting2Location">Location</li>
-				<li class="meetingInfo" id="meeting2Time">Time</li>
-			</ul>
+		<div class="maybeBtn" id="maybeBtn1" onclick="setMaybe(1);">
+			Maybe
 		</div>
-	</li>
-	<li class="meetExtension" id="meetExtension2">
-		<div class="settingRoom">Rom</div>
-		<div class="settingTime">Tid</div>
-		<div class="slettBtn" id="slettBtn2">Slett</div>
-		<div class="okBtn" id="okBtn2">Ok</div>
-	</li>
-	<li class="meetingList" id="meeting3" onclick="editMeeting(3)">
-		<img src="images/Dots-liten.png" class="dots"/>
-		<div class ="meetingPicture" id="meeting3Picture">
-			<ul class="allMeetingInfo"id="meeting3Info">
-				<li class="meetingInfo" id="meeting3Name"></li>
-				<li class="meetingInfo" id="meeting3Location"></li>
-				<li class="meetingInfo" id="meeting3Time"></li>
-			</ul>
+		<div class="notAttendBtn" id="notAttendBtn1" onclick="setNotAttending(1);">
+			Not Attending
 		</div>
-	</li>
-	<li class="meetingList" id="meeting4" onclick="editMeeting(4)">
-		<img src="images/Dots-liten.png" class="dots"/>
-		<div class ="meetingPicture" id="meeting4Picture">
-			<ul class="allMeetingInfo"id="meeting4Info">
-				<li class="meetingInfo" id="meeting4Name"></li>
-				<li class="meetingInfo" id="meeting4Location"></li>
-				<li class="meetingInfo" id="meeting4Time"></li>
-			</ul>
-		</div>
-	</li>
-	<li class="meetingList" id="meeting5" onclick="editMeeting(5)">
-		<img src="images/Dots-liten.png" class="dots"/>
-		<div class ="meetingPicture" id="meeting5Picture">
-			<ul class="allMeetingInfo"id="meeting5Info">
-				<li class="meetingInfo" id="meeting5Name"></li>
-				<li class="meetingInfo" id="meeting5Location"></li>
-				<li class="meetingInfo" id="meeting5Time"></li>
-			</ul>
-		</div>
-	</li>
-	<li class="meetingList" id="meeting6" onclick="editMeeting(6)">
-		<img src="images/Dots-liten.png" class="dots"/>
-		<div class ="meetingPicture" id="meeting6Picture">
-			<ul class="allMeetingInfo"id="meeting6Info">
-				<li class="meetingInfo" id="meeting6Name"></li>
-				<li class="meetingInfo" id="meeting6Location"></li>
-				<li class="meetingInfo" id="meeting6Time"></li>
-			</ul>
-		</div>
-	</li>
-	<li class="meetingList" id="meeting7" onclick="editMeeting(7)">
-		<img src="images/Dots-liten.png" class="dots"/>
-		<div class ="meetingPicture" id="meeting7Picture">
-			<ul class="allMeetingInfo"id="meeting7Info">
-				<li class="meetingInfo" id="meeting7Name"></li>
-				<li class="meetingInfo" id="meeting7Location"></li>
-				<li class="meetingInfo" id="meeting7Time"></li>
-			</ul>
-		</div>
-	</li>
-	<li class="meetingList" id="meeting9" onclick="editMeeting(9)">
-		<img src="images/Dots-liten.png" class="dots"/>
-		<div class ="meetingPicture" id="meeting9Picture">
-			<ul class="allMeetingInfo"id="meeting9Info">
-				<li class="meetingInfo" id="meeting9Name"></li>
-				<li class="meetingInfo" id="meeting9Location"></li>
-				<li class="meetingInfo" id="meeting9Time"></li>
-			</ul>
-		</div>
-	</li>
-	<li class="meetingList" id="meeting10" onclick="editMeeting(10)">
-		<img src="images/Dots-liten.png" class="dots"/>
-		<div class ="meetingPicture" id="meeting10Picture">
-			<ul class="allMeetingInfo"id="meeting10Info">
-				<li class="meetingInfo" id="meeting10Name"></li>
-				<li class="meetingInfo" id="meeting10Location"></li>
-				<li class="meetingInfo" id="meeting10Time"></li>
-			</ul>
-		</div>
-	</li>
-</ul>
+	</div>
+</div>
