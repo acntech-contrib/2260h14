@@ -19,33 +19,49 @@ $(".attendBtn").css("background-image", "url(images/Gray-radio.png)");
 $(".maybeBtn").css("background-image", "url(images/Gray-radio.png)");
 $(".notAttendBtn").css("background-image", "url(images/Gray-radio.png)");
 
-//Read jSON data from web
-/*
 $.getJSON('http://meetin.mybluemix.net/meetins', function(data) {
 	for(var i=0;i<data.length;i++) {
 		var n = i+1;
-		var meeting = "#meeting"+n;
-		var picture = meeting + "Picture";
-		var req = meeting + "Name";
-		var loc = meeting + "Location";
-		var time = meeting + "Time";
+		var meeting = "#meetIn"+n;
+		var meetIcon = "#meetIcon"+n;
+		var title = "#meetTitle"+n;
+		var time = "#meetTime"+n;
+		var reply = "#meetReply"+n;
+		var host = "#host"+n;
+		var invite1 = "#invite1List"+n;
 		
-		$(req).text(data[i].requester);
 		var tid = data[i].starttime + " - " + data[i].endtime;
 		$(time).text(tid);
-		$(loc).text(data[i].beaconid);
+		$(title).text(data[i].requester);
+		
+		/* Hantera val av meetIn-bild här:
+		 * 
+		 * $(loc).text(data[i].beaconid); 
+		
+		Hantera profilbilder till deltagare här:      */
 		
 		var url = "url(https://s3-eu-west-1.amazonaws.com/meetin/";
-		var profilepic = ""+data[i].requester;
-		var urlUser = url.concat(profilepic);
+		
+		var profilepicHost = ""+data[i].requester;
+		var urlUser = url+profilepicHost;
 		var urlString = urlUser.concat(".jpg)");
 		
-		$(picture).css("background", urlString);
-		$(picture).css("background-repeat", "no-repeat");
-		$(picture).css("background-size", "contain");
-		$(meeting).css("visibility", "visible");
+		$(host).text(data[i].requester);
+		$(host).css("background", urlString);
+		$(host).css("background-size", "contain");
+		
+		url = "url(https://s3-eu-west-1.amazonaws.com/meetin/";
+		var profilepicInvite = ""+data[i].receiver;
+		var urlUser1 = url+profilepicInvite;
+		var urlString1 = urlUser1.concat(".jpg)");
+		
+		$(invite1).text(data[i].receiver);
+		$(invite1).css("background", urlString1);
+		$(invite1).css("background-size", "contain");
+		
+		//$(meeting).css("visibility", "visible");
 	}
-});*/
+});
 
 function expandBtnClick(n) {
 	if(extensions[n-1]) {
@@ -95,7 +111,7 @@ function expand(n) {
 	var arrow = "#expandArrow"+n;
 	var inviteList = "#inviteList"+n;
 	
-	$(meetIn).css("height", "350");
+	$(meetIn).css("height", "370");
 	$(replyMenu).css("visibility", "visible");
 	$(arrow).css("-webkit-transform", "rotate(180deg)");
 
@@ -113,7 +129,7 @@ function expand(n) {
 }
 
 function deleteMeetIn(n) {
-	alert("Delete meetIn?")
+	alert("Delete meetIn?");
 }
 
 

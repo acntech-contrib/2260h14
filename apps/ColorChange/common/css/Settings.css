@@ -1,7 +1,43 @@
 body {
-	background-color: rgb(255, 255, 255);
+	background-color: rgb(235, 240, 235);
 }
 
 #settingProfile {
-	padding-left: 50%;
+	margin-top: 20%;
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
+	float: left;
+	text-align: left;
+	border-top-style: solid;
+	border-top-color: rgb(210, 210, 210);
+	border-top-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(210, 210, 210);
+	border-bottom-width: 1px;
+	border-left-style: solid;
+	border-left-color: rgb(210, 210, 210);
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-right-color: rgb(210, 210, 210);
+	border-right-width: 1px;
+	
+	font-size: 16px;
+	text-indent: 8.5px;
+	background-color: rgb(255, 255, 255);
+}
+
+#profilePicker {
+	height: 30px;
+	width: 20%;
+	float: right;
+	-webkit-appearance: none;
+	-webkit-box-sizing: border-box;
+    box-sizing: border-box;
+   	border: solid 2px transparent;
+   	
+   	margin-top: 5px;
+   	
+   	font-size: 16px;
+   	color: rgb(180, 180, 180);
 }
