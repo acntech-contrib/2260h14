@@ -21,13 +21,13 @@ $.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 				$(contactLocation).text(data[i].beaconid);
 				$(contactStatus).text(data[i].userstatus);
 				if(data[i].userstatus == "Available") {
-					$(contactStatus).css("background-image", "url(images/Green-radio-Big.png)");
+					//$(contactStatus).css("background-image", "url(images/Green-radio-Big.png)");
 				}
 				else if(data[i].userstatus == "Busy") {
-					$(contactStatus).css("background-image", "url(images/Red-radio-Big.png)");
+					//$(contactStatus).css("background-image", "url(images/Red-radio-Big.png)");
 				}
 				else {
-					$(contactStatus).css("background-image", "none");
+					//$(contactStatus).css("background-image", "none");
 				}
 			}
 			else {

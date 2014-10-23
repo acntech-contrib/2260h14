@@ -38,11 +38,22 @@ body {
 	font-weight: bold;
 }
 
+.statusElements {
+	padding-left: 55px;
+	display: inline;
+}
+
+.statusIcon {
+	max-height: 14px;
+	max-width: auto;
+	display: inline;
+}
+
 .profilStatus {
 	padding-left: 55px;
 	font-size: 14px;
-	border-bottom-color: rgb(210, 210, 210);
-	inline: block;
+	color: rgb(210, 210, 210);
+	display: inline;
 }
 
 .go {
