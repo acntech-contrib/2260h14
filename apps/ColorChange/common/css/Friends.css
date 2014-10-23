@@ -13,11 +13,44 @@ body {
 	background-color: rgb(255, 255, 255);
 	border-bottom-style: solid;
 	border-bottom-color: rgb(210, 210, 210);
-	border-bottom-width: 2px;
+	border-bottom-width: 1px;
 	height: 60px;
 	padding-top: 10px;
 	line-height: 20px;
 	visibility: hidden;
+}
+
+.profilLocation {
+	float: right;
+	padding-right: 5px;
+	font-size: 14;
+	color: rgb(200, 200, 200);
+}
+
+.profileText {
+	padding-top: 10px;
+	list-style-type: none;
+}
+
+.profilName {
+	padding-top: 10px;
+	padding-left: 55px;
+	font-weight: bold;
+}
+
+.profilStatus {
+	padding-left: 55px;
+	font-size: 14px;
+	border-bottom-color: rgb(210, 210, 210);
+	inline: block;
+}
+
+.go {
+	max-height: 14px;
+	max-width: auto;
+	-webkit-transform: rotate(180deg);
+	float: right;
+	margin-top: 5px;
 }
 
 .contactLocation {

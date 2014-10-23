@@ -29,8 +29,9 @@ body {
 
 #profilePicker {
 	height: 30px;
-	width: 20%;
+	width: 30%;
 	float: right;
+	padding-right: 30px;
 	-webkit-appearance: none;
 	-webkit-box-sizing: border-box;
     box-sizing: border-box;

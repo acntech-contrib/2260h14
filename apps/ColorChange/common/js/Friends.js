@@ -14,14 +14,26 @@ $.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 			var contactLocation = contact.concat("Location");
 			var contactStatus = contact.concat("Status");
 			
+			var goArrow = "#go"+n;
+			
 			$(contactName).text(data[i].username);
 			if(data[i].userstatus != "Incognito") {
 				$(contactLocation).text(data[i].beaconid);
 				$(contactStatus).text(data[i].userstatus);
+				if(data[i].userstatus == "Available") {
+					$(contactStatus).css("background-image", "url(images/Green-radio-Big.png)");
+				}
+				else if(data[i].userstatus == "Busy") {
+					$(contactStatus).css("background-image", "url(images/Red-radio-Big.png)");
+				}
+				else {
+					$(contactStatus).css("background-image", "none");
+				}
 			}
 			else {
 				$(contactLocation).text("");
 				$(contactStatus).text("");
+				$(goArrow).css("visibility", "hidden");
 			}
 			var contactPicture = contact.concat("Picture");
 			var url = "url(https://s3-eu-west-1.amazonaws.com/meetin/";

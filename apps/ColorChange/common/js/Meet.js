@@ -18,59 +18,12 @@ for(var i=0;extensions.length;i++) {
 $(".attendBtn").css("background-image", "url(images/Gray-radio.png)");
 $(".maybeBtn").css("background-image", "url(images/Gray-radio.png)");
 $(".notAttendBtn").css("background-image", "url(images/Gray-radio.png)");
-/*
-$.getJSON('http://meetin.mybluemix.net/meetins', function(data) {
-	for(var i=0;i<data.length;i++) {
-		var n = i+1;
-		var meeting = "#meetIn"+n;
-		var meetIcon = "#meetIcon"+n;
-		var title = "#meetTitle"+n;
-		var time = "#meetTime"+n;
-		var reply = "#meetReply"+n;
-		var host = "#host"+n;
-		var invite1 = "#invite1List"+n;
-		
-		var tid = data[i].starttime + " - " + data[i].endtime;
-		$(time).text(tid);
-		$(title).text(data[i].requester);
-		
-		/* Hantera val av meetIn-bild här:
-		 * 
-		 * $(loc).text(data[i].beaconid); 
-		
-		Hantera profilbilder till deltagare här:      */
-		/*
-		var url = "url(https://s3-eu-west-1.amazonaws.com/meetin/";
-		
-		var profilepicHost = ""+data[i].requester;
-		var urlUser = url+profilepicHost;
-		var urlString = urlUser.concat(".jpg)");
-		
-		$(host).text(data[i].requester);
-		$(host).css("background", urlString);
-		$(host).css("background-size", "contain");
-		
-		url = "url(https://s3-eu-west-1.amazonaws.com/meetin/";
-		var profilepicInvite = ""+data[i].receiver;
-		var urlUser1 = url+profilepicInvite;
-		var urlString1 = urlUser1.concat(".jpg)");
-		
-		$(invite1).text(data[i].receiver);
-		$(invite1).css("background", urlString1);
-		$(invite1).css("background-size", "contain");
-		
-		//$(meeting).css("visibility", "visible");
-	}
-});
-*/
-
 
 var meetID = [];
+//Read all meetIn's related to this user
 $.getJSON('http://meetin.mybluemix.net/listall/'+user, function(data) {
 	var n = 0;
 	for(var i=1;i<4;i++) {
-		//Read all meetIn's related to this user
-		//alert(data[i].length);
 		for(var j=0;j<data[i].length;j++) {
 				meetID[n] = data[i][j]._id;
 				n++;
@@ -105,34 +58,47 @@ $.getJSON('http://meetin.mybluemix.net/listall/'+user, function(data) {
 					$(host).text(hostInfo);
 					$(host).css("background", urlString);
 					$(host).css("background-size", "contain");
+					if(data[i][j].requester == user) {
+						$("#meetReply"+n).text(hostStatus);
+					}
 				}
+				var invitesCnt = 0;
 				if(data[i][j].receiver != null) {
+					invitesCnt++;
 					var inviteName = data[i][j].receiver;
 					var inviteStatus = data[i][j].statusRec;
 					
 					var profilepicInvite = ""+data[i][j].receiver;
 					profilepicInvite = profilepicInvite.toLowerCase();
-					var urlUser1 = url+profilepicInvite;
-					var urlString1 = urlUser1.concat(".jpg)");
+					var urlUser = url+profilepicInvite;
+					var urlString = urlUser.concat(".jpg)");
 					
-					$(invite1).text(inviteName/* + " - " + inviteStatus*/);
-					$(invite1).css("background", urlString1);
+					$("#invite"+invitesCnt+"List"+n).text(inviteName + " - " + inviteStatus);
+					$("#invite"+invitesCnt+"List"+n).css("background", urlString);
 					$(invite1).css("background-size", "contain");
+					if(data[i][j].receiver == user) {
+						$("#meetReply"+n).text(inviteStatus);
+					}
 				}
 				if(data[i][j].receiver2 != null) {
+					invitesCnt++;
 					var inviteName = data[i][j].receiver2;
 					var inviteStatus = data[i][j].statusRec2;
 					
 					var profilepicInvite = ""+data[i][j].receiver2;
 					profilepicInvite = profilepicInvite.toLowerCase();
-					var urlUser1 = url+profilepicInvite;
-					var urlString1 = urlUser1.concat(".jpg)");
+					var urlUser = url+profilepicInvite;
+					var urlString = urlUser.concat(".jpg)");
 					
-					$(invite2).text(inviteName/* + " - " + inviteStatus*/);
-					$(invite2).css("background", urlString1);
-					$(invite2).css("background-size", "contain");
+					$("#invite"+invitesCnt+"List"+n).text(inviteName + " - " + inviteStatus);
+					$("#invite"+invitesCnt+"List"+n).css("background", urlString);
+					$("#invite"+invitesCnt+"List"+n).css("background-size", "contain");
+					if(data[i][j].receiver2 == user) {
+						$("#meetReply"+n).text(inviteStatus);
+					}
 				}
-			// Visa bara det som behövs: $(meeting).css("visibility", "visible");
+			//Show container for meetIn 
+			$(meeting).css("display", "block");;
 		}
 	}
 });
