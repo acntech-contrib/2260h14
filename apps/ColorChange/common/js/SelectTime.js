@@ -1,12 +1,19 @@
 currentPage = {};
 $('html, body').animate({ scrollTop: 0}, 0);
 
+/*
 $(document).ready(function(){
-    $('body').on('show', function() {
-       //execute startEdit(); ??????????????
-    });
+	$("#startField").load(function() {	
+	    $("#startPicker").load(function() {
+	    	$('#startPicker').focus().trigger("click");
+		});
+	});
 });
 
+$("#startPicker").load(function() {
+	  startEdit();
+});
+*/
 currentPage.init = function() {
 	WL.Logger.debug("SelectTime :: init");
 };
