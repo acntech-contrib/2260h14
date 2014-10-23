@@ -5,6 +5,7 @@ currentPage.init = function() {
 };
 
 //Read jSON data from web
+
 $.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 	var n = 1;
 	for(var i=0;i<data.length;i++) {
@@ -14,20 +15,21 @@ $.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 			var contactLocation = contact.concat("Location");
 			var contactStatus = contact.concat("Status");
 			
+			var statusIcon = "#statusIcon"+n;
 			var goArrow = "#go"+n;
 			
 			$(contactName).text(data[i].username);
 			if(data[i].userstatus != "Incognito") {
 				$(contactLocation).text(data[i].beaconid);
 				$(contactStatus).text(data[i].userstatus);
-				if(data[i].userstatus == "Available") {
-					//$(contactStatus).css("background-image", "url(images/Green-radio-Big.png)");
+				if(data[i].userstatus+"" == "Available") {
+					$(statusIcon).attr("src", "images/Green-radio.png");
 				}
-				else if(data[i].userstatus == "Busy") {
-					//$(contactStatus).css("background-image", "url(images/Red-radio-Big.png)");
+				else if(data[i].userstatus+"" == "Busy") {
+					$(statusIcon).attr("src", "images/Red-radio.png");					
 				}
 				else {
-					//$(contactStatus).css("background-image", "none");
+					$(statusIcon).css("visibility", "hidden");
 				}
 			}
 			else {
@@ -43,7 +45,6 @@ $.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 			
 			$(contactPicture).css("background", urlString);
 			$(contactPicture).css("background-size", "contain");
-			
 			$(contact).css("visibility", "visible");
 			n++;
 			if(n == data.length) {

@@ -38,20 +38,18 @@ body {
 	font-weight: bold;
 }
 
-.statusElements {
-	padding-left: 55px;
-}
-
 .profilStatus {
+	padding-left: 55px;
 	font-size: 14px;
 	color: rgb(210, 210, 210);
-	white-space: nowrap;
 }
 
 .statusIcon {
 	max-height: 14px;
 	max-width: auto;
 	float: right;
+	margin-top: 34px;
+	margin-right: 130px;
 }
 
 .go {
