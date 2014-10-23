@@ -40,20 +40,18 @@ body {
 
 .statusElements {
 	padding-left: 55px;
-	display: inline;
+}
+
+.profilStatus {
+	font-size: 14px;
+	color: rgb(210, 210, 210);
+	white-space: nowrap;
 }
 
 .statusIcon {
 	max-height: 14px;
 	max-width: auto;
-	display: inline;
-}
-
-.profilStatus {
-	padding-left: 55px;
-	font-size: 14px;
-	color: rgb(210, 210, 210);
-	display: inline;
+	float: right;
 }
 
 .go {
@@ -61,7 +59,7 @@ body {
 	max-width: auto;
 	-webkit-transform: rotate(180deg);
 	float: right;
-	margin-top: 5px;
+	margin-top: 4px;
 }
 
 .contactLocation {
