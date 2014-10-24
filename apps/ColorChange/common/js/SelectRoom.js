@@ -6,7 +6,17 @@ currentPage.init = function() {
 
 currentPage.back = function() {
 	WL.Logger.debug("SelectRoom :: back");
-	$("#pagePort").load(pageHistory.pop());
+	var backToMap = path + "pages/SelectMap.html";
+	var history = pageHistory.pop();
+	if(history == backToMap) {
+		transformHeaderOnLocate();
+		$("#pagePort").load(history);
+		displayUser(meetInRec1);
+	}
+	else {
+		$("#pagePort").load(history);
+	}
+	
 };
 
 currentPage.next = function() {
@@ -16,7 +26,18 @@ currentPage.next = function() {
 	$("#pagePort").load(path + "pages/SelectTime.html");
 };
 
+
 selectedRoom = "";
+
+if(meetInRoom == "Ada") {
+	select(1);
+}
+else if(meetInRoom == "C") {
+	select(2);
+}
+else if(meetInRoom == "Euclid") {
+	select(3);
+}
 
 function select(n) {
 	var radioBtn = "#radioBtnRoom"+n;

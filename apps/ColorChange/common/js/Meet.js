@@ -8,6 +8,11 @@ currentPage.add = function() {
 	//add meetin
 	WL.Logger.debug("addMeetIn :: pressed");
 	pageHistory.push(path + "pages/Meet.html");
+	meetInName = "Group";
+	meetInTime = "";
+	meetInRec1 = "";
+	meetInRec2 = "";
+	meetInRoom = "";
 	$("#pagePort").load(path + "pages/SelectFriends.html");
 };
 
@@ -29,8 +34,6 @@ $.getJSON('http://meetin.mybluemix.net/listall/'+user, function(data) {
 				n++;
 				var title = "#meetTitle"+n;
 				var host = "#host"+n;
-				var invite1 = "#invite1List"+n;
-				var invite2 = "#invite2List"+n;
 				var meeting = "#meetIn"+n;
 				var meetIcon = "#meetIcon"+n;
 				var time = "#meetTime"+n;
@@ -62,9 +65,7 @@ $.getJSON('http://meetin.mybluemix.net/listall/'+user, function(data) {
 						$("#meetReply"+n).text(hostStatus);
 					}
 				}
-				var invitesCnt = 0;
 				if(data[i][j].receiver != null && typeof(data[i][j].receiver) != 'undefined' && data[i][j].receiver != "") {
-					invitesCnt++;
 					var inviteName = data[i][j].receiver;
 					var inviteStatus = data[i][j].statusRec;
 					
@@ -73,9 +74,10 @@ $.getJSON('http://meetin.mybluemix.net/listall/'+user, function(data) {
 					var urlUser = url+profilepicInvite;
 					var urlString = urlUser.concat(".jpg)");
 					
-					$("#invite"+invitesCnt+"List"+n).text(inviteName + " - " + inviteStatus);
-					$("#invite"+invitesCnt+"List"+n).css("background", urlString);
-					$(invite1).css("background-size", "contain");
+					$("#invite"+1+"List"+n).text(inviteName + " - " + inviteStatus);
+					$("#invite"+1+"List"+n).css("background", urlString);
+					$("#invite"+1+"List"+n).css("background-size", "contain");
+					$("#invite"+1+"List"+n).css("display", "block");
 					if(data[i][j].receiver == user) {
 						$("#meetReply"+n).text(inviteStatus);
 					}
@@ -90,7 +92,6 @@ $.getJSON('http://meetin.mybluemix.net/listall/'+user, function(data) {
 					}
 				}
 				if(data[i][j].receiver2 != null && typeof(data[i][j].receiver2) != 'undefined' && data[i][j].receiver != "") {
-					invitesCnt++;
 					var inviteName = data[i][j].receiver2;
 					var inviteStatus = data[i][j].statusRec2;
 					
@@ -99,9 +100,10 @@ $.getJSON('http://meetin.mybluemix.net/listall/'+user, function(data) {
 					var urlUser = url+profilepicInvite;
 					var urlString = urlUser.concat(".jpg)");
 					
-					$("#invite"+invitesCnt+"List"+n).text(inviteName + " - " + inviteStatus);
-					$("#invite"+invitesCnt+"List"+n).css("background", urlString);
-					$("#invite"+invitesCnt+"List"+n).css("background-size", "contain");
+					$("#invite"+2+"List"+n).text(inviteName + " - " + inviteStatus);
+					$("#invite"+2+"List"+n).css("background", urlString);
+					$("#invite"+2+"List"+n).css("background-size", "contain");
+					$("#invite"+2+"List"+n).css("display", "block");
 					if(data[i][j].receiver2 == user) {
 						$("#meetReply"+n).text(inviteStatus);
 					}
@@ -116,7 +118,7 @@ $.getJSON('http://meetin.mybluemix.net/listall/'+user, function(data) {
 					}
 				}
 			//Show container for meetIn 
-			$(meeting).css("display", "block");;
+			$(meeting).css("display", "block");
 		}
 	}
 });
@@ -186,8 +188,25 @@ function expand(n) {
 	$(inviteList).css("visibility", "visible");
 }
 
+var topMeetIn = 1;
 function deleteMeetIn(n) {
-	alert("Delete meetIn?");
+	var userRole;
+	var hostString = $("#host"+n).text().split(" ");
+	var rec1String = $("#invite1List"+n).text().split(" ");
+	var rec2String = $("#invite2List"+n).text().split(" ");
+	
+	if(hostString[0] != null && user == hostString[0]) {
+		userRole = "requester";
+	}
+	else if(rec1String[0] != null && user == rec1String[0]) {
+		userRole = "receiver";
+	}
+	else if(rec2String[0] != null && user == rec2String[0]) {
+		userRole = "receiver2";
+	}
+	
+	$.getJSON("http://meetin.mybluemix.net/deletemeetin?meetid="+meetID[n-1]+"&user="+userRole, function(data) {});
+	$("#meetIn"+n).css("display", "none");
 }
 
 
@@ -220,17 +239,14 @@ function updateMeetIn(rep, n) {
 	
 	$("#meetReply"+n).text(rep);
 	
-	if(user == hostString[0]) {
+	if(hostString[0] != null && user == hostString[0]) {
 		userRole = "requester";
-		$("#host"+n).text(hostString[0] + " - " + rep);
 	}
-	else if(user == rec1String[0]) {
+	else if(rec1String[0] != null && user == rec1String[0]) {
 		userRole = "receiver";
-		$("#invite1List"+n).text(rec1String[0] + " - " + rep);
 	}
-	else if(user == rec2String[0]) {
+	else if(rec2String[0] != null && user == rec2String[0]) {
 		userRole = "receiver2";
-		$("#invite2List"+n).text(rec2String[0] + " - " + rep);
 	}
 	$.getJSON("http://meetin.mybluemix.net/updatemeetin?meetid="+meetID[n-1]+"&user="+userRole+"&newStatus="+rep, function(data) {});
 }

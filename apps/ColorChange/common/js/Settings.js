@@ -3,7 +3,6 @@ $('html, body').animate({ scrollTop: 0}, 0);
 currentPage.init = function() {
 	WL.Logger.debug("Settings :: init");
 };
-
 //Read jSON data from web
 $.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 	for(var i=0;i<data.length;i++) {

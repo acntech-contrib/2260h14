@@ -8,10 +8,10 @@ var picPrefix = "url(https://s3-eu-west-1.amazonaws.com/meetin/";
 
 //Data for new meetIn
 var meetInName = "Group";
-var meetInTime;
-var meetInRec1;
-var meetInRec2;
-var meetInRoom;
+var meetInTime = "";
+var meetInRec1 = "";
+var meetInRec2 = "";
+var meetInRoom = "";
 
 function wlCommonInit(){
 	/*
@@ -228,7 +228,10 @@ function transformHeaderOnLocate() {
 	$("#myLocation").css("display", "none");
 	$("#myStatus").css("display", "none");
 	
+
+	$("#ok").text("meet");
 	$("#back").css("display", "block");
+	$("#ok").css("display", "block");
 }
 
 function transformHeaderOnDone() {
@@ -249,6 +252,10 @@ function restoreHeader() {
 	$("#myPicture").css("display", "block");
 	$("#myLocation").css("display", "block");
 	$("#myStatus").css("display", "block");
+}
+
+function hidePlus() {
+	$("#plus").css("display", "none");
 }
 
 function back() {

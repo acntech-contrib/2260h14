@@ -30,6 +30,7 @@ function tabBarInit() {
 	    WL.TabBar.addItem("Map",
 	    	function () {
 	    		restoreHeader();
+	    		hidePlus();
 	    		WL.Logger.debug("Map :: pressed");
 	    		$("#pagePort").load(path + "pages/Map.html");
 	    		displayUser(user);
@@ -40,6 +41,7 @@ function tabBarInit() {
 	    WL.TabBar.addItem("Settings",
 	    	function () {
 	    		restoreHeader();
+	    		hidePlus();
 	    		WL.Logger.debug("Settings :: pressed");
 	    		$("#pagePort").load(path + "pages/Settings.html");
 	    	}

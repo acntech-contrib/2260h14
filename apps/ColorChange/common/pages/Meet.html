@@ -6,338 +6,340 @@
    	href: 'css/Meet.css'
 	}).appendTo('body');
 </script>
-<div class="meetIn" id="meetIn1">
-	<img src="images/Cross.png" class="deleteBtn" id="deleteBtn1" onclick = "deleteMeetIn(1);"/>
-	<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow1" onclick = "expandBtnClick(1);"/>
-	<img src="images/Ada.png" class="meetIcon" id="meetIcon1"/>
-	<div class="meetInInfo" id="meetInInfo1">
-		<div class="meetTime" id="meetTime1">16:00-17:00</div>
-		<div class="meetTitle" id="meetTitle1">INF1000</div>
-		<div class="meetReply" id="meetReply1">Pending</div>
-	</div>
-	<div class="reply-menu" id="reply-menu1">
-		<div class="attendBtn" id="attendBtn1" onclick="setAttending(1);">
-			Attending
+<div id="meetInView">
+	<div class="meetIn" id="meetIn1">
+		<img src="images/Cross.png" class="deleteBtn" id="deleteBtn1" onclick = "deleteMeetIn(1);"/>
+		<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow1" onclick = "expandBtnClick(1);"/>
+		<img src="images/Ada.png" class="meetIcon" id="meetIcon1"/>
+		<div class="meetInInfo" id="meetInInfo1">
+			<div class="meetTime" id="meetTime1">16:00-17:00</div>
+			<div class="meetTitle" id="meetTitle1">INF1000</div>
+			<div class="meetReply" id="meetReply1">Pending</div>
 		</div>
-		<div class="maybeBtn" id="maybeBtn1" onclick="setMaybe(1);">
-			Maybe
-		</div>
-		<div class="notAttendBtn" id="notAttendBtn1" onclick="setNotAttending(1);">
-			Not Attending
-		</div>
-		<div class="inviteList" id="inviteList1">
-			<div class="host" id="host1"></div>
-			<div class="invite" id="invite1List1"></div>
-			<div class="invite" id="invite2List1"></div>
-			<div class="invite" id="invite3List1"></div>
-			<div class="invite" id="invite4List1"></div>
-			<div class="invite" id="invite5List1"></div>
-			<div class="invite" id="invite6List1"></div>
-			<div class="invite" id="invite7List1"></div>
-			<div class="invite" id="invite8List1"></div>
-			<div class="invite" id="invite9List1"></div>
-		</div>
-	</div>
-</div>
-
-<div class="meetIn" id="meetIn2">
-	<img src="images/Cross.png" class="deleteBtn" id="deleteBtn2" onclick = "deleteMeetIn(2);"/>
-	<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow2" onclick = "expandBtnClick(2);"/>
-	<img src="images/C.png" class="meetIcon" id="meetIcon2"/>
-	<div class="meetInInfo" id="meetInInfo2">
-		<div class="meetTime" id="meetTime2">16:00-17:00</div>
-		<div class="meetTitle" id="meetTitle2">INF1000</div>
-		<div class="meetReply" id="meetReply2">Pending</div>
-	</div>
-	<div class="reply-menu" id="reply-menu2">
-		<div class="attendBtn" id="attendBtn2" onclick="setAttending(2);">
-			Attending
-		</div>
-		<div class="maybeBtn" id="maybeBtn2" onclick="setMaybe(2);">
-			Maybe
-		</div>
-		<div class="notAttendBtn" id="notAttendBtn2" onclick="setNotAttending(2);">
-			Not Attending
-		</div>
-		<div class="inviteList" id="inviteList2">
-			<div class="host" id="host2"></div>
-			<div class="invite" id="invite1List2"></div>
-			<div class="invite" id="invite2List2"></div>
-			<div class="invite" id="invite3List2"></div>
-			<div class="invite" id="invite4List2"></div>
-			<div class="invite" id="invite5List2"></div>
-			<div class="invite" id="invite6List2"></div>
-			<div class="invite" id="invite7List2"></div>
-			<div class="invite" id="invite8List2"></div>
-			<div class="invite" id="invite9List2"></div>
+		<div class="reply-menu" id="reply-menu1">
+			<div class="attendBtn" id="attendBtn1" onclick="setAttending(1);">
+				Attending
+			</div>
+			<div class="maybeBtn" id="maybeBtn1" onclick="setMaybe(1);">
+				Maybe
+			</div>
+			<div class="notAttendBtn" id="notAttendBtn1" onclick="setNotAttending(1);">
+				Not Attending
+			</div>
+			<div class="inviteList" id="inviteList1">
+				<div class="host" id="host1"></div>
+				<div class="invite" id="invite1List1"></div>
+				<div class="invite" id="invite2List1"></div>
+				<div class="invite" id="invite3List1"></div>
+				<div class="invite" id="invite4List1"></div>
+				<div class="invite" id="invite5List1"></div>
+				<div class="invite" id="invite6List1"></div>
+				<div class="invite" id="invite7List1"></div>
+				<div class="invite" id="invite8List1"></div>
+				<div class="invite" id="invite9List1"></div>
+			</div>
 		</div>
 	</div>
-</div>
-<div class="meetIn" id="meetIn3">
-	<img src="images/Cross.png" class="deleteBtn" id="deleteBtn3" onclick = "deleteMeetIn(3);"/>
-	<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow3" onclick = "expandBtnClick(3);"/>
-	<img src="images/Euclid.png" class="meetIcon" id="meetIcon3"/>
-	<div class="meetInInfo" id="meetInInfo3">
-		<div class="meetTime" id="meetTime3">16:00-17:00</div>
-		<div class="meetTitle" id="meetTitle3">INF1000</div>
-		<div class="meetReply" id="meetReply3">Pending</div>
-	</div>
-	<div class="reply-menu" id="reply-menu3">
-		<div class="attendBtn" id="attendBtn3" onclick="setAttending(3);">
-			Attending
+	
+	<div class="meetIn" id="meetIn2">
+		<img src="images/Cross.png" class="deleteBtn" id="deleteBtn2" onclick = "deleteMeetIn(2);"/>
+		<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow2" onclick = "expandBtnClick(2);"/>
+		<img src="images/C.png" class="meetIcon" id="meetIcon2"/>
+		<div class="meetInInfo" id="meetInInfo2">
+			<div class="meetTime" id="meetTime2">16:00-17:00</div>
+			<div class="meetTitle" id="meetTitle2">INF1000</div>
+			<div class="meetReply" id="meetReply2">Pending</div>
 		</div>
-		<div class="maybeBtn" id="maybeBtn3" onclick="setMaybe(3);">
-			Maybe
-		</div>
-		<div class="notAttendBtn" id="notAttendBtn3" onclick="setNotAttending(3);">
-			Not Attending
-		</div>
-		<div class="inviteList" id="inviteList3">
-			<div class="host" id="host3"></div>
-			<div class="invite" id="invite1List3"></div>
-			<div class="invite" id="invite2List3"></div>
-			<div class="invite" id="invite3List3"></div>
-			<div class="invite" id="invite4List3"></div>
-			<div class="invite" id="invite5List3"></div>
-			<div class="invite" id="invite6List3"></div>
-			<div class="invite" id="invite7List3"></div>
-			<div class="invite" id="invite8List3"></div>
-			<div class="invite" id="invite9List3"></div>
-		</div>
-	</div>
-</div>
-
-<div class="meetIn" id="meetIn4">
-	<img src="images/Cross.png" class="deleteBtn" id="deleteBtn4" onclick = "deleteMeetIn(4);"/>
-	<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow4" onclick = "expandBtnClick(4);"/>
-	<img src="images/Ada.png" class="meetIcon" id="meetIcon4"/>
-	<div class="meetInInfo" id="meetInInfo4">
-		<div class="meetTime" id="meetTime4">16:00-17:00</div>
-		<div class="meetTitle" id="meetTitle4">INF1000</div>
-		<div class="meetReply" id="meetReply4">Pending</div>
-	</div>
-	<div class="reply-menu" id="reply-menu4">
-		<div class="attendBtn" id="attendBtn4" onclick="setAttending(4);">
-			Attending
-		</div>
-		<div class="maybeBtn" id="maybeBtn4" onclick="setMaybe(4);">
-			Maybe
-		</div>
-		<div class="notAttendBtn" id="notAttendBtn4" onclick="setNotAttending(4);">
-			Not Attending
-		</div>
-		<div class="inviteList" id="inviteList4">
-			<div class="host" id="host4"></div>
-			<div class="invite" id="invite1List4"></div>
-			<div class="invite" id="invite2List4"></div>
-			<div class="invite" id="invite3List4"></div>
-			<div class="invite" id="invite4List4"></div>
-			<div class="invite" id="invite5List4"></div>
-			<div class="invite" id="invite6List4"></div>
-			<div class="invite" id="invite7List4"></div>
-			<div class="invite" id="invite8List4"></div>
-			<div class="invite" id="invite9List4"></div>
+		<div class="reply-menu" id="reply-menu2">
+			<div class="attendBtn" id="attendBtn2" onclick="setAttending(2);">
+				Attending
+			</div>
+			<div class="maybeBtn" id="maybeBtn2" onclick="setMaybe(2);">
+				Maybe
+			</div>
+			<div class="notAttendBtn" id="notAttendBtn2" onclick="setNotAttending(2);">
+				Not Attending
+			</div>
+			<div class="inviteList" id="inviteList2">
+				<div class="host" id="host2"></div>
+				<div class="invite" id="invite1List2"></div>
+				<div class="invite" id="invite2List2"></div>
+				<div class="invite" id="invite3List2"></div>
+				<div class="invite" id="invite4List2"></div>
+				<div class="invite" id="invite5List2"></div>
+				<div class="invite" id="invite6List2"></div>
+				<div class="invite" id="invite7List2"></div>
+				<div class="invite" id="invite8List2"></div>
+				<div class="invite" id="invite9List2"></div>
+			</div>
 		</div>
 	</div>
-</div>
-<div class="meetIn" id="meetIn5">
-	<img src="images/Cross.png" class="deleteBtn" id="deleteBtn5" onclick = "deleteMeetIn(5);"/>
-	<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow5" onclick = "expandBtnClick(5);"/>
-	<img src="images/Ada.png" class="meetIcon" id="meetIcon5"/>
-	<div class="meetInInfo" id="meetInInfo5">
-		<div class="meetTime" id="meetTime5">16:00-17:00</div>
-		<div class="meetTitle" id="meetTitle5">INF1000</div>
-		<div class="meetReply" id="meetReply5">Pending</div>
-	</div>
-	<div class="reply-menu" id="reply-menu5">
-		<div class="attendBtn" id="attendBtn5" onclick="setAttending(5);">
-			Attending
+	<div class="meetIn" id="meetIn3">
+		<img src="images/Cross.png" class="deleteBtn" id="deleteBtn3" onclick = "deleteMeetIn(3);"/>
+		<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow3" onclick = "expandBtnClick(3);"/>
+		<img src="images/Euclid.png" class="meetIcon" id="meetIcon3"/>
+		<div class="meetInInfo" id="meetInInfo3">
+			<div class="meetTime" id="meetTime3">16:00-17:00</div>
+			<div class="meetTitle" id="meetTitle3">INF1000</div>
+			<div class="meetReply" id="meetReply3">Pending</div>
 		</div>
-		<div class="maybeBtn" id="maybeBtn5" onclick="setMaybe(5);">
-			Maybe
-		</div>
-		<div class="notAttendBtn" id="notAttendBtn5" onclick="setNotAttending(5);">
-			Not Attending
-		</div>
-		<div class="inviteList" id="inviteList5">
-			<div class="host" id="host5"></div>
-			<div class="invite" id="invite1List5"></div>
-			<div class="invite" id="invite2List5"></div>
-			<div class="invite" id="invite3List5"></div>
-			<div class="invite" id="invite4List5"></div>
-			<div class="invite" id="invite5List5"></div>
-			<div class="invite" id="invite6List5"></div>
-			<div class="invite" id="invite7List5"></div>
-			<div class="invite" id="invite8List5"></div>
-			<div class="invite" id="invite9List5"></div>
-		</div>
-	</div>
-</div>
-
-<div class="meetIn" id="meetIn6">
-	<img src="images/Cross.png" class="deleteBtn" id="deleteBtn6" onclick = "deleteMeetIn(6);"/>
-	<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow6" onclick = "expandBtnClick(6);"/>
-	<img src="images/C.png" class="meetIcon" id="meetIcon6"/>
-	<div class="meetInInfo" id="meetInInfo6">
-		<div class="meetTime" id="meetTime6">16:00-17:00</div>
-		<div class="meetTitle" id="meetTitle6">INF1000</div>
-		<div class="meetReply" id="meetReply6">Pending</div>
-	</div>
-	<div class="reply-menu" id="reply-menu6">
-		<div class="attendBtn" id="attendBtn6" onclick="setAttending(6);">
-			Attending
-		</div>
-		<div class="maybeBtn" id="maybeBtn6" onclick="setMaybe(6);">
-			Maybe
-		</div>
-		<div class="notAttendBtn" id="notAttendBtn6" onclick="setNotAttending(6);">
-			Not Attending
-		</div>
-		<div class="inviteList" id="inviteList6">
-			<div class="host" id="host6"></div>
-			<div class="invite" id="invite1List6"></div>
-			<div class="invite" id="invite2List6"></div>
-			<div class="invite" id="invite3List6"></div>
-			<div class="invite" id="invite4List6"></div>
-			<div class="invite" id="invite5List6"></div>
-			<div class="invite" id="invite6List6"></div>
-			<div class="invite" id="invite7List6"></div>
-			<div class="invite" id="invite8List6"></div>
-			<div class="invite" id="invite9List6"></div>
+		<div class="reply-menu" id="reply-menu3">
+			<div class="attendBtn" id="attendBtn3" onclick="setAttending(3);">
+				Attending
+			</div>
+			<div class="maybeBtn" id="maybeBtn3" onclick="setMaybe(3);">
+				Maybe
+			</div>
+			<div class="notAttendBtn" id="notAttendBtn3" onclick="setNotAttending(3);">
+				Not Attending
+			</div>
+			<div class="inviteList" id="inviteList3">
+				<div class="host" id="host3"></div>
+				<div class="invite" id="invite1List3"></div>
+				<div class="invite" id="invite2List3"></div>
+				<div class="invite" id="invite3List3"></div>
+				<div class="invite" id="invite4List3"></div>
+				<div class="invite" id="invite5List3"></div>
+				<div class="invite" id="invite6List3"></div>
+				<div class="invite" id="invite7List3"></div>
+				<div class="invite" id="invite8List3"></div>
+				<div class="invite" id="invite9List3"></div>
+			</div>
 		</div>
 	</div>
-</div>
-<div class="meetIn" id="meetIn7">
-	<img src="images/Cross.png" class="deleteBtn" id="deleteBtn7" onclick = "deleteMeetIn(7);"/>
-	<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow7" onclick = "expandBtnClick(7);"/>
-	<img src="images/Euclid.png" class="meetIcon" id="meetIcon7"/>
-	<div class="meetInInfo" id="meetInInfo7">
-		<div class="meetTime" id="meetTime7">16:00-17:00</div>
-		<div class="meetTitle" id="meetTitle7">INF1000</div>
-		<div class="meetReply" id="meetReply7">Pending</div>
-	</div>
-	<div class="reply-menu" id="reply-menu7">
-		<div class="attendBtn" id="attendBtn7" onclick="setAttending(7);">
-			Attending
+	
+	<div class="meetIn" id="meetIn4">
+		<img src="images/Cross.png" class="deleteBtn" id="deleteBtn4" onclick = "deleteMeetIn(4);"/>
+		<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow4" onclick = "expandBtnClick(4);"/>
+		<img src="images/Ada.png" class="meetIcon" id="meetIcon4"/>
+		<div class="meetInInfo" id="meetInInfo4">
+			<div class="meetTime" id="meetTime4">16:00-17:00</div>
+			<div class="meetTitle" id="meetTitle4">INF1000</div>
+			<div class="meetReply" id="meetReply4">Pending</div>
 		</div>
-		<div class="maybeBtn" id="maybeBtn7" onclick="setMaybe(7);">
-			Maybe
-		</div>
-		<div class="notAttendBtn" id="notAttendBtn7" onclick="setNotAttending(7);">
-			Not Attending
-		</div>
-		<div class="inviteList" id="inviteList7">
-			<div class="host" id="host7"></div>
-			<div class="invite" id="invite1List7"></div>
-			<div class="invite" id="invite2List7"></div>
-			<div class="invite" id="invite3List7"></div>
-			<div class="invite" id="invite4List7"></div>
-			<div class="invite" id="invite5List7"></div>
-			<div class="invite" id="invite6List7"></div>
-			<div class="invite" id="invite7List7"></div>
-			<div class="invite" id="invite8List7"></div>
-			<div class="invite" id="invite9List7"></div>
-		</div>
-	</div>
-</div>
-
-<div class="meetIn" id="meetIn8">
-	<img src="images/Cross.png" class="deleteBtn" id="deleteBtn8" onclick = "deleteMeetIn(8);"/>
-	<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow8" onclick = "expandBtnClick(8);"/>
-	<img src="images/Ada.png" class="meetIcon" id="meetIcon8"/>
-	<div class="meetInInfo" id="meetInInfo8">
-		<div class="meetTime" id="meetTime8">16:00-17:00</div>
-		<div class="meetTitle" id="meetTitle8">INF1000</div>
-		<div class="meetReply" id="meetReply8">Pending</div>
-	</div>
-	<div class="reply-menu" id="reply-menu8">
-		<div class="attendBtn" id="attendBtn8" onclick="setAttending(8);">
-			Attending
-		</div>
-		<div class="maybeBtn" id="maybeBtn8" onclick="setMaybe(8);">
-			Maybe
-		</div>
-		<div class="notAttendBtn" id="notAttendBtn8" onclick="setNotAttending(8);">
-			Not Attending
-		</div>
-		<div class="inviteList" id="inviteList8">
-			<div class="host" id="host8"></div>
-			<div class="invite" id="invite1List8"></div>
-			<div class="invite" id="invite2List8"></div>
-			<div class="invite" id="invite3List8"></div>
-			<div class="invite" id="invite4List8"></div>
-			<div class="invite" id="invite5List8"></div>
-			<div class="invite" id="invite6List8"></div>
-			<div class="invite" id="invite7List8"></div>
-			<div class="invite" id="invite8List8"></div>
-			<div class="invite" id="invite9List8"></div>
+		<div class="reply-menu" id="reply-menu4">
+			<div class="attendBtn" id="attendBtn4" onclick="setAttending(4);">
+				Attending
+			</div>
+			<div class="maybeBtn" id="maybeBtn4" onclick="setMaybe(4);">
+				Maybe
+			</div>
+			<div class="notAttendBtn" id="notAttendBtn4" onclick="setNotAttending(4);">
+				Not Attending
+			</div>
+			<div class="inviteList" id="inviteList4">
+				<div class="host" id="host4"></div>
+				<div class="invite" id="invite1List4"></div>
+				<div class="invite" id="invite2List4"></div>
+				<div class="invite" id="invite3List4"></div>
+				<div class="invite" id="invite4List4"></div>
+				<div class="invite" id="invite5List4"></div>
+				<div class="invite" id="invite6List4"></div>
+				<div class="invite" id="invite7List4"></div>
+				<div class="invite" id="invite8List4"></div>
+				<div class="invite" id="invite9List4"></div>
+			</div>
 		</div>
 	</div>
-</div>
-
-<div class="meetIn" id="meetIn9">
-	<img src="images/Cross.png" class="deleteBtn" id="deleteBtn9" onclick = "deleteMeetIn(9);"/>
-	<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow9" onclick = "expandBtnClick(9);"/>
-	<img src="images/C.png" class="meetIcon" id="meetIcon9"/>
-	<div class="meetInInfo" id="meetInInfo9">
-		<div class="meetTime" id="meetTime9">16:00-17:00</div>
-		<div class="meetTitle" id="meetTitle9">INF1000</div>
-		<div class="meetReply" id="meetReply9">Pending</div>
+	<div class="meetIn" id="meetIn5">
+		<img src="images/Cross.png" class="deleteBtn" id="deleteBtn5" onclick = "deleteMeetIn(5);"/>
+		<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow5" onclick = "expandBtnClick(5);"/>
+		<img src="images/Ada.png" class="meetIcon" id="meetIcon5"/>
+		<div class="meetInInfo" id="meetInInfo5">
+			<div class="meetTime" id="meetTime5">16:00-17:00</div>
+			<div class="meetTitle" id="meetTitle5">INF1000</div>
+			<div class="meetReply" id="meetReply5">Pending</div>
+		</div>
+		<div class="reply-menu" id="reply-menu5">
+			<div class="attendBtn" id="attendBtn5" onclick="setAttending(5);">
+				Attending
+			</div>
+			<div class="maybeBtn" id="maybeBtn5" onclick="setMaybe(5);">
+				Maybe
+			</div>
+			<div class="notAttendBtn" id="notAttendBtn5" onclick="setNotAttending(5);">
+				Not Attending
+			</div>
+			<div class="inviteList" id="inviteList5">
+				<div class="host" id="host5"></div>
+				<div class="invite" id="invite1List5"></div>
+				<div class="invite" id="invite2List5"></div>
+				<div class="invite" id="invite3List5"></div>
+				<div class="invite" id="invite4List5"></div>
+				<div class="invite" id="invite5List5"></div>
+				<div class="invite" id="invite6List5"></div>
+				<div class="invite" id="invite7List5"></div>
+				<div class="invite" id="invite8List5"></div>
+				<div class="invite" id="invite9List5"></div>
+			</div>
+		</div>
 	</div>
-	<div class="reply-menu" id="reply-menu9">
-		<div class="attendBtn" id="attendBtn9" onclick="setAttending(9);">
-			Attending
+	
+	<div class="meetIn" id="meetIn6">
+		<img src="images/Cross.png" class="deleteBtn" id="deleteBtn6" onclick = "deleteMeetIn(6);"/>
+		<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow6" onclick = "expandBtnClick(6);"/>
+		<img src="images/C.png" class="meetIcon" id="meetIcon6"/>
+		<div class="meetInInfo" id="meetInInfo6">
+			<div class="meetTime" id="meetTime6">16:00-17:00</div>
+			<div class="meetTitle" id="meetTitle6">INF1000</div>
+			<div class="meetReply" id="meetReply6">Pending</div>
 		</div>
-		<div class="maybeBtn" id="maybeBtn9" onclick="setMaybe(9);">
-			Maybe
-		</div>
-		<div class="notAttendBtn" id="notAttendBtn9" onclick="setNotAttending(9);">
-			Not Attending
-		</div>
-		<div class="inviteList" id="inviteList9">
-			<div class="host" id="host9"></div>
-			<div class="invite" id="invite1List9"></div>
-			<div class="invite" id="invite2List9"></div>
-			<div class="invite" id="invite3List9"></div>
-			<div class="invite" id="invite4List9"></div>
-			<div class="invite" id="invite5List9"></div>
-			<div class="invite" id="invite6List9"></div>
-			<div class="invite" id="invite7List9"></div>
-			<div class="invite" id="invite8List9"></div>
-			<div class="invite" id="invite9List9"></div>
+		<div class="reply-menu" id="reply-menu6">
+			<div class="attendBtn" id="attendBtn6" onclick="setAttending(6);">
+				Attending
+			</div>
+			<div class="maybeBtn" id="maybeBtn6" onclick="setMaybe(6);">
+				Maybe
+			</div>
+			<div class="notAttendBtn" id="notAttendBtn6" onclick="setNotAttending(6);">
+				Not Attending
+			</div>
+			<div class="inviteList" id="inviteList6">
+				<div class="host" id="host6"></div>
+				<div class="invite" id="invite1List6"></div>
+				<div class="invite" id="invite2List6"></div>
+				<div class="invite" id="invite3List6"></div>
+				<div class="invite" id="invite4List6"></div>
+				<div class="invite" id="invite5List6"></div>
+				<div class="invite" id="invite6List6"></div>
+				<div class="invite" id="invite7List6"></div>
+				<div class="invite" id="invite8List6"></div>
+				<div class="invite" id="invite9List6"></div>
+			</div>
 		</div>
 	</div>
-</div>
-<div class="meetIn" id="meetIn10">
-	<img src="images/Cross.png" class="deleteBtn" id="deleteBtn10" onclick = "deleteMeetIn(10);"/>
-	<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow10" onclick = "expandBtnClick(10);"/>
-	<img src="images/Euclid.png" class="meetIcon" id="meetIcon10"/>
-	<div class="meetInInfo" id="meetInInfo10">
-		<div class="meetTime" id="meetTime10">16:00-17:00</div>
-		<div class="meetTitle" id="meetTitle10">INF1000</div>
-		<div class="meetReply" id="meetReply10">Pending</div>
+	<div class="meetIn" id="meetIn7">
+		<img src="images/Cross.png" class="deleteBtn" id="deleteBtn7" onclick = "deleteMeetIn(7);"/>
+		<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow7" onclick = "expandBtnClick(7);"/>
+		<img src="images/Euclid.png" class="meetIcon" id="meetIcon7"/>
+		<div class="meetInInfo" id="meetInInfo7">
+			<div class="meetTime" id="meetTime7">16:00-17:00</div>
+			<div class="meetTitle" id="meetTitle7">INF1000</div>
+			<div class="meetReply" id="meetReply7">Pending</div>
+		</div>
+		<div class="reply-menu" id="reply-menu7">
+			<div class="attendBtn" id="attendBtn7" onclick="setAttending(7);">
+				Attending
+			</div>
+			<div class="maybeBtn" id="maybeBtn7" onclick="setMaybe(7);">
+				Maybe
+			</div>
+			<div class="notAttendBtn" id="notAttendBtn7" onclick="setNotAttending(7);">
+				Not Attending
+			</div>
+			<div class="inviteList" id="inviteList7">
+				<div class="host" id="host7"></div>
+				<div class="invite" id="invite1List7"></div>
+				<div class="invite" id="invite2List7"></div>
+				<div class="invite" id="invite3List7"></div>
+				<div class="invite" id="invite4List7"></div>
+				<div class="invite" id="invite5List7"></div>
+				<div class="invite" id="invite6List7"></div>
+				<div class="invite" id="invite7List7"></div>
+				<div class="invite" id="invite8List7"></div>
+				<div class="invite" id="invite9List7"></div>
+			</div>
+		</div>
 	</div>
-	<div class="reply-menu" id="reply-menu10">
-		<div class="attendBtn" id="attendBtn10" onclick="setAttending(10);">
-			Attending
+	
+	<div class="meetIn" id="meetIn8">
+		<img src="images/Cross.png" class="deleteBtn" id="deleteBtn8" onclick = "deleteMeetIn(8);"/>
+		<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow8" onclick = "expandBtnClick(8);"/>
+		<img src="images/Ada.png" class="meetIcon" id="meetIcon8"/>
+		<div class="meetInInfo" id="meetInInfo8">
+			<div class="meetTime" id="meetTime8">16:00-17:00</div>
+			<div class="meetTitle" id="meetTitle8">INF1000</div>
+			<div class="meetReply" id="meetReply8">Pending</div>
 		</div>
-		<div class="maybeBtn" id="maybeBtn10" onclick="setMaybe(10);">
-			Maybe
+		<div class="reply-menu" id="reply-menu8">
+			<div class="attendBtn" id="attendBtn8" onclick="setAttending(8);">
+				Attending
+			</div>
+			<div class="maybeBtn" id="maybeBtn8" onclick="setMaybe(8);">
+				Maybe
+			</div>
+			<div class="notAttendBtn" id="notAttendBtn8" onclick="setNotAttending(8);">
+				Not Attending
+			</div>
+			<div class="inviteList" id="inviteList8">
+				<div class="host" id="host8"></div>
+				<div class="invite" id="invite1List8"></div>
+				<div class="invite" id="invite2List8"></div>
+				<div class="invite" id="invite3List8"></div>
+				<div class="invite" id="invite4List8"></div>
+				<div class="invite" id="invite5List8"></div>
+				<div class="invite" id="invite6List8"></div>
+				<div class="invite" id="invite7List8"></div>
+				<div class="invite" id="invite8List8"></div>
+				<div class="invite" id="invite9List8"></div>
+			</div>
 		</div>
-		<div class="notAttendBtn" id="notAttendBtn10" onclick="setNotAttending(10);">
-			Not Attending
+	</div>
+	
+	<div class="meetIn" id="meetIn9">
+		<img src="images/Cross.png" class="deleteBtn" id="deleteBtn9" onclick = "deleteMeetIn(9);"/>
+		<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow9" onclick = "expandBtnClick(9);"/>
+		<img src="images/C.png" class="meetIcon" id="meetIcon9"/>
+		<div class="meetInInfo" id="meetInInfo9">
+			<div class="meetTime" id="meetTime9">16:00-17:00</div>
+			<div class="meetTitle" id="meetTitle9">INF1000</div>
+			<div class="meetReply" id="meetReply9">Pending</div>
 		</div>
-		<div class="inviteList" id="inviteList10">
-			<div class="host" id="host10"></div>
-			<div class="invite" id="invite1List10"></div>
-			<div class="invite" id="invite2List10"></div>
-			<div class="invite" id="invite3List10"></div>
-			<div class="invite" id="invite4List10"></div>
-			<div class="invite" id="invite5List10"></div>
-			<div class="invite" id="invite6List10"></div>
-			<div class="invite" id="invite7List10"></div>
-			<div class="invite" id="invite8List10"></div>
-			<div class="invite" id="invite9List10"></div>
+		<div class="reply-menu" id="reply-menu9">
+			<div class="attendBtn" id="attendBtn9" onclick="setAttending(9);">
+				Attending
+			</div>
+			<div class="maybeBtn" id="maybeBtn9" onclick="setMaybe(9);">
+				Maybe
+			</div>
+			<div class="notAttendBtn" id="notAttendBtn9" onclick="setNotAttending(9);">
+				Not Attending
+			</div>
+			<div class="inviteList" id="inviteList9">
+				<div class="host" id="host9"></div>
+				<div class="invite" id="invite1List9"></div>
+				<div class="invite" id="invite2List9"></div>
+				<div class="invite" id="invite3List9"></div>
+				<div class="invite" id="invite4List9"></div>
+				<div class="invite" id="invite5List9"></div>
+				<div class="invite" id="invite6List9"></div>
+				<div class="invite" id="invite7List9"></div>
+				<div class="invite" id="invite8List9"></div>
+				<div class="invite" id="invite9List9"></div>
+			</div>
+		</div>
+	</div>
+	<div class="meetIn" id="meetIn10">
+		<img src="images/Cross.png" class="deleteBtn" id="deleteBtn10" onclick = "deleteMeetIn(10);"/>
+		<img src="images/Arrow-Gray.png" class="expandArrow" id="expandArrow10" onclick = "expandBtnClick(10);"/>
+		<img src="images/Euclid.png" class="meetIcon" id="meetIcon10"/>
+		<div class="meetInInfo" id="meetInInfo10">
+			<div class="meetTime" id="meetTime10">16:00-17:00</div>
+			<div class="meetTitle" id="meetTitle10">INF1000</div>
+			<div class="meetReply" id="meetReply10">Pending</div>
+		</div>
+		<div class="reply-menu" id="reply-menu10">
+			<div class="attendBtn" id="attendBtn10" onclick="setAttending(10);">
+				Attending
+			</div>
+			<div class="maybeBtn" id="maybeBtn10" onclick="setMaybe(10);">
+				Maybe
+			</div>
+			<div class="notAttendBtn" id="notAttendBtn10" onclick="setNotAttending(10);">
+				Not Attending
+			</div>
+			<div class="inviteList" id="inviteList10">
+				<div class="host" id="host10"></div>
+				<div class="invite" id="invite1List10"></div>
+				<div class="invite" id="invite2List10"></div>
+				<div class="invite" id="invite3List10"></div>
+				<div class="invite" id="invite4List10"></div>
+				<div class="invite" id="invite5List10"></div>
+				<div class="invite" id="invite6List10"></div>
+				<div class="invite" id="invite7List10"></div>
+				<div class="invite" id="invite8List10"></div>
+				<div class="invite" id="invite9List10"></div>
+			</div>
 		</div>
 	</div>
 </div>

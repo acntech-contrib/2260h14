@@ -3,9 +3,20 @@ currentPage.init = function() {
 	WL.Logger.debug("Map :: init");
 };
 
+var userToMeet;
+var roomToMeetIn;
 currentPage.add = function() {
 	//add map?
 	alert("Add map!");
+};
+
+currentPage.next = function() {
+	meetInRec1 = userToMeet;
+	meetInRoom = roomToMeetIn;
+	WL.Logger.debug("MapNext :: next");
+	pageHistory.push(path + "pages/Map.html");
+	transformHeader();
+	$("#pagePort").load(path + "pages/SelectRoom.html");
 };
 
 currentPage.back = function() {
@@ -25,6 +36,8 @@ function displayUser(userShow) {
 	$.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 		for(var i=0;i<data.length;i++) {
 			if(userShow == data[i].username) {
+				userToMeet = userShow;
+				roomToMeetIn = data[i].beaconid;
 				var room = "#"+data[i].beaconid;
 				var userPic = data[i].profilepic;
 				var url = picPrefix+userPic+".jpg)";
