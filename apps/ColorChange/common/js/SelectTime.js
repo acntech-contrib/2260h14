@@ -75,6 +75,10 @@ function createNewMeetIn() {
 	if(nameEdited) {
 		meetInName = $("#nameBox").val();
 	}
-	
-	$.getJSON("meetin.mybluemix.net/reqmeetin?"+user+"&"+meetInRec1+"&"+meetInRec2+"&"+meetInRoom+"&"+startTimeMeetIn+"&"+endTimeMeetIn+"&"+meetInName, function(data) {});
+	if(meetInRec2 != "") {
+		$.getJSON("http://meetin.mybluemix.net/reqmeetin?requester="+user+"&receiver="+meetInRec1+"&receiver2="+meetInRec2+"&beaconid="+meetInRoom+"&starttime="+startTimeMeetIn+"&endtime="+endTimeMeetIn+"&groupName="+meetInName, function(data) {});
+	}
+	else if(meetInRec1 != ""){
+		$.getJSON("http://meetin.mybluemix.net/reqmeetin?requester="+user+"&receiver="+meetInRec1+"&beaconid="+meetInRoom+"&starttime="+startTimeMeetIn+"&endtime="+endTimeMeetIn+"&groupName="+meetInName, function(data) {});
+	}
 }

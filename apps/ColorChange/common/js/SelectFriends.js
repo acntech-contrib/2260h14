@@ -61,6 +61,7 @@ var inviteCount = 0;
 
 function select(n) {
 	var checkbox = "#checkbox"+n;
+	var contactName = "#contact"+n+"Name";
 	if(checkboxValues[n-1]) {
 		$(checkbox).attr("src", "images/Box.png");
 		inviteCount++;
@@ -68,12 +69,12 @@ function select(n) {
 	else {
 		$(checkbox).attr("src", "images/BoxCheck.png");
 		inviteCount++;
-		if(inviteCount == 1) {
-			meetInRec1 = $(contactName).text();
-		}
-		else {
-			meetInRec2 = $(contactName).text();
-		}
+	}
+	if(inviteCount == 1) {
+		meetInRec1 = $(contactName).text();
+	}
+	else {
+		meetInRec2 = $(contactName).text();
 	}
 	checkboxValues[n-1] = !checkboxValues[n-1];
 }
