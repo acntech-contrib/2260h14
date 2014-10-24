@@ -164,7 +164,7 @@ function setBusy() {
 	$("#redRadio").css("background-image", "url(images/Red-radio-selected.png)");
 	$("#grayRadio").css("background-image", "url(images/Blue-radio.png)");
 	$("#myStatus").text("Busy");
-	newStatus(" Busy");
+	newStatus("Busy");
 }
 
 function setIncognito() {

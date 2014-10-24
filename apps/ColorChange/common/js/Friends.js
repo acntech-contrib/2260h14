@@ -22,20 +22,24 @@ $.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 			if(data[i].userstatus != "Incognito") {
 				$(contactLocation).text(data[i].beaconid);
 				$(contactStatus).text(data[i].userstatus);
-				if(data[i].userstatus+"" == "Available") {
+				if(data[i].userstatus == "Available") {
 					$(statusIcon).attr("src", "images/Green-radio.png");
 				}
-				else if(data[i].userstatus+"" == "Busy") {
-					$(statusIcon).attr("src", "images/Red-radio.png");					
+				else if(data[i].userstatus == "Busy") {
+					$(statusIcon).attr("src", "images/Red-radio.png");
 				}
-				else {
-					$(statusIcon).css("visibility", "hidden");
-				}
+				$(statusIcon).css("margin-right", "192px");
+				$(contactStatus).css("margin-right", "68px");
+				$(goArrow).css("visibility", "visible");
 			}
 			else {
-				$(contactLocation).text("");
-				$(contactStatus).text("");
+				$(contactLocation).css("visibility", "hidden");
+				$(contactStatus).text("Offline");
 				$(goArrow).css("visibility", "hidden");
+				$(statusIcon).attr("src", "images/Gray-radio.png");
+				
+				$(statusIcon).css("margin-right", "209px");
+				$(contactStatus).css("margin-right", "79px");
 			}
 			var contactPicture = contact.concat("Picture");
 			var url = "url(https://s3-eu-west-1.amazonaws.com/meetin/";
