@@ -31,8 +31,8 @@ $.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 		if(data[i].username != user) {
 			var contact = "#contact"+n;
 			var contactName = contact.concat("Name");
-			var contactLocation = contact.concat("Location");
-			var contactStatus = contact.concat("Status");
+			/*var contactLocation = contact.concat("Location");
+			var contactStatus = contact.concat("Status");*/
 			
 			$(contactName).text(data[i].username);
 			/*$(contactLocation).text(data[i].beaconid);
@@ -57,20 +57,23 @@ $.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 		}
 	}
 });
+var inviteCount = 0;
 
 function select(n) {
 	var checkbox = "#checkbox"+n;
 	if(checkboxValues[n-1]) {
 		$(checkbox).attr("src", "images/Box.png");
+		inviteCount++;
 	}
 	else {
 		$(checkbox).attr("src", "images/BoxCheck.png");
+		inviteCount++;
+		if(inviteCount == 1) {
+			meetInRec1 = $(contactName).text();
+		}
+		else {
+			meetInRec2 = $(contactName).text();
+		}
 	}
 	checkboxValues[n-1] = !checkboxValues[n-1];
-	/*Kolla om någon valts innan ok visas??
-	for(var i=0;i<checkboxValues.length;i++) {
-		if(checkboxValues[i]) {
-			
-		}
-	}*/
 }

@@ -6,6 +6,13 @@ var path = "";
 var user;
 var picPrefix = "url(https://s3-eu-west-1.amazonaws.com/meetin/";
 
+//Data for new meetIn
+var meetInName = "Group";
+var meetInTime;
+var meetInRec1;
+var meetInRec2;
+var meetInRoom;
+
 function wlCommonInit(){
 	/*
 	 * Use of WL.Client.connect() API before any connectivity to a Worklight Server is required. 

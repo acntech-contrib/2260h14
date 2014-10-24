@@ -28,6 +28,16 @@ function select(n) {
 		$(radioBtn).attr("src", "images/RadioBoxCheck.png");
 	}
 	selectedRoom = radioBtn;
+	
+	if(n == 1) {
+		meetInRoom = "Ada";
+	}
+	else if(n == 2) {
+		meetInRoom = "C";
+	}
+	else {
+		meetInRoom = "Euclid";
+	}
 }
 
 function selectAda() {

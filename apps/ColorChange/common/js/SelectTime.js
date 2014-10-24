@@ -27,7 +27,13 @@ currentPage.back = function() {
 currentPage.next = function() {
 	WL.Logger.debug("SelectTime :: next");
 	pageHistory = [];
+	createNewMeetIn();
 	restoreHeader();
+	meetInName = "Group";
+	meetInTime = "";
+	meetInRec1 = "";
+	meetInRec2 = "";
+	meetInRoom = "";
 	$("#pagePort").load(path + "pages/Meet.html");
 };
 
@@ -60,4 +66,15 @@ function nameEdit() {
 	$("#endField").css("background-color", "rgb(255, 255, 255)");
 	$("#endPicker").css("background-color", "rgb(255, 255, 255)");
 	nameEdited = true;
+}
+
+function createNewMeetIn() {
+	meetInTime = $('#startPicker').val() + " - " + $('#endPicker').val();
+	var startTimeMeetIn = $('#startPicker').val();
+	var endTimeMeetIn = $('#endPicker').val();
+	if(nameEdited) {
+		meetInName = $("#nameBox").val();
+	}
+	
+	$.getJSON("meetin.mybluemix.net/reqmeetin?"+user+"&"+meetInRec1+"&"+meetInRec2+"&"+meetInRoom+"&"+startTimeMeetIn+"&"+endTimeMeetIn+"&"+meetInName, function(data) {});
 }
