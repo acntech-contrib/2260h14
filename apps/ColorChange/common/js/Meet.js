@@ -64,6 +64,15 @@ $.getJSON('http://meetin.mybluemix.net/listall/'+user, function(data) {
 					if(data[i][j].requester == user) {
 						$("#meetReply"+n).text(hostStatus);
 					}
+					if(hostStatus == "Attending") {
+						setAttending(n);
+					}
+					else if(hostStatus == "Maybe") {
+						setMaybe(n);
+					}
+					else if(hostStatus == "Not attending") {
+						setNotAttending(n);
+					}
 				}
 				if(data[i][j].receiver != null && typeof(data[i][j].receiver) != 'undefined' && data[i][j].receiver != "") {
 					var inviteName = data[i][j].receiver;
@@ -211,23 +220,23 @@ function deleteMeetIn(n) {
 
 
 function setAttending(n) {
-	$(".maybeBtn").css("background-image", "url(images/Gray-radio.png)");
-	$(".notAttendBtn").css("background-image", "url(images/Gray-radio.png)");
-	$(".attendBtn").css("background-image", "url(images/Gray-radio-selected.png)");
+	$("#maybeBtn"+n).css("background-image", "url(images/Gray-radio.png)");
+	$("#notAttendBtn"+n).css("background-image", "url(images/Gray-radio.png)");
+	$("#attendBtn"+n).css("background-image", "url(images/Gray-radio-selected.png)");
 	updateMeetIn("Attending", n); 
 }
 
 function setMaybe(n) {
-	$(".attendBtn").css("background-image", "url(images/Gray-radio.png)");
-	$(".notAttendBtn").css("background-image", "url(images/Gray-radio.png)");
-	$(".maybeBtn").css("background-image", "url(images/Gray-radio-selected.png)");
+	$("#attendBtn"+n).css("background-image", "url(images/Gray-radio.png)");
+	$("#notAttendBtn"+n).css("background-image", "url(images/Gray-radio.png)");
+	$("#maybeBtn"+n).css("background-image", "url(images/Gray-radio-selected.png)");
 	updateMeetIn("Maybe", n);
 }
 
 function setNotAttending(n) {
-	$(".attendBtn").css("background-image", "url(images/Gray-radio.png)");
-	$(".maybeBtn").css("background-image", "url(images/Gray-radio.png)");
-	$(".notAttendBtn").css("background-image", "url(images/Gray-radio-selected.png)");
+	$("#attendBtn"+n).css("background-image", "url(images/Gray-radio.png)");
+	$("#maybeBtn"+n).css("background-image", "url(images/Gray-radio.png)");
+	$("#notAttendBtn"+n).css("background-image", "url(images/Gray-radio-selected.png)");
 	updateMeetIn("Not attending", n);
 }
 
@@ -241,12 +250,15 @@ function updateMeetIn(rep, n) {
 	
 	if(hostString[0] != null && user == hostString[0]) {
 		userRole = "requester";
+		$("#host"+n).text(user + " - " + rep);
 	}
 	else if(rec1String[0] != null && user == rec1String[0]) {
 		userRole = "receiver";
+		$("#invite1List"+n).text(user + " - " + rep);
 	}
 	else if(rec2String[0] != null && user == rec2String[0]) {
 		userRole = "receiver2";
+		$("#invite2List"+n).text(user + " - " + rep);
 	}
 	$.getJSON("http://meetin.mybluemix.net/updatemeetin?meetid="+meetID[n-1]+"&user="+userRole+"&newStatus="+rep, function(data) {});
 }

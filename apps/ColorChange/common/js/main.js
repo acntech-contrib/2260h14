@@ -62,7 +62,7 @@ Beacon = function() {
 }();
 
 //Executes the method findBeacons every second
-var beaconCaller = setInterval(function(){findBeacons();}, 1000);
+var beaconCaller = setInterval(function(){findBeacons();}, 200);
 
 //Scans the enviroment for iBeacons
 function findBeacons() {

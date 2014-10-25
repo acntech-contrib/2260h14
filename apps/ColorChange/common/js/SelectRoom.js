@@ -10,7 +10,13 @@ currentPage.back = function() {
 	var history = pageHistory.pop();
 	if(history == backToMap) {
 		transformHeaderOnLocate();
-		$("#pagePort").load(history);
+		$("#pagePort").load(path + "pages/Map.html", function(){
+			$.getScript(path + "js/Map.js", function() {
+				if (currentPage.init) {
+					currentPage.init();
+				}
+			});
+		});
 		displayUser(meetInRec1);
 	}
 	else {

@@ -27,9 +27,26 @@ $.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 				}
 				else if(data[i].userstatus == "Busy") {
 					$(statusIcon).attr("src", "images/Red-radio.png");
-				}
+				}/*
 				$(statusIcon).css("margin-right", "192px");
-				$(contactStatus).css("margin-right", "68px");
+				$(contactStatus).css("margin-right", "68px");*/
+				
+				if(data[i].beaconid == "Ada") {
+					$(statusIcon).css("margin-right", "178px");
+					$(contactStatus).css("margin-right", "68px");
+				}
+				else if(data[i].beaconid == "C") {
+					$(statusIcon).css("margin-right", "194px");
+					$(contactStatus).css("margin-right", "68px");
+				}
+				else if(data[i].beaconid == "Euclid") {
+					$(statusIcon).css("margin-right", "162px");
+					$(contactStatus).css("margin-right", "68px");
+				}
+				else {
+					$(statusIcon).css("margin-right", "209px");
+					$(contactStatus).css("margin-right", "79px");
+				}
 				$(goArrow).css("visibility", "visible");
 			}
 			else {
@@ -38,7 +55,7 @@ $.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 				$(goArrow).css("visibility", "hidden");
 				$(statusIcon).attr("src", "images/Gray-radio.png");
 				
-				$(statusIcon).css("margin-right", "209px");
+				$(statusIcon).css("margin-right", "211px");
 				$(contactStatus).css("margin-right", "79px");
 			}
 			var contactPicture = contact.concat("Picture");
@@ -69,18 +86,20 @@ $.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 });
 
 function showOnMap(contactNumber) {
-	WL.Logger.debug("Map :: pressed");
-	transformHeaderOnLocate();
-	pageHistory.push(path + "pages/Friends.html");
-	$("#pagePort").load(path + "pages/Map.html", function(){
-		$.getScript(path + "js/Map.js", function() {
-			if (currentPage.init) {
-				currentPage.init();
-			}
+	if($("#contact"+contactNumber+"Status").text() != "Offline") {
+		WL.Logger.debug("Map :: pressed");
+		transformHeaderOnLocate();
+		pageHistory.push(path + "pages/Friends.html");
+		$("#pagePort").load(path + "pages/Map.html", function(){
+			$.getScript(path + "js/Map.js", function() {
+				if (currentPage.init) {
+					currentPage.init();
+				}
+			});
 		});
-	});
-	var userClicked = document.getElementById("contact"+contactNumber+"Name").innerHTML;
-	displayUser(userClicked);
+		var userClicked = document.getElementById("contact"+contactNumber+"Name").innerHTML;
+		displayUser(userClicked);
+	}
 }
 
 currentPage.add = function() {
