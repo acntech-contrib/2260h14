@@ -9,13 +9,13 @@ body {
 	float: left;
 	text-align: left;
 	border-bottom-style: solid;
-	border-bottom-color: rgb(210, 210, 210);
+	border-bottom-color: rgb(180, 180, 180);
 	border-bottom-width: 1px;
 	border-left-style: solid;
-	border-left-color: rgb(210, 210, 210);
+	border-left-color: rgb(180, 180, 180);
 	border-left-width: 1px;
 	border-right-style: solid;
-	border-right-color: rgb(210, 210, 210);
+	border-right-color: rgb(180, 180, 180);
 	border-right-width: 1px;
 	
 	font-size: 16px;
@@ -41,7 +41,7 @@ body {
 #startField {
 	margin-top: 20%;
 	border-top-style: solid;
-	border-top-color: rgb(210, 210, 210);
+	border-top-color: rgb(180, 180, 180);
 	border-top-width: 1px;
 }
 

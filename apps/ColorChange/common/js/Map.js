@@ -52,7 +52,7 @@ function displayUser(userShow) {
 					scrollFactor = 0.3;
 				}
 				else if(data[i].beaconid == "Euclid") {
-					scrollFactor = 0.75;
+					scrollFactor = 0.70;
 				}
 				else {
 					scrollFactor = 0;

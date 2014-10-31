@@ -47,7 +47,7 @@ $.getJSON('http://meetin.mybluemix.net/listall/'+user, function(data) {
 				var name = data[i][j].groupName;
 				$(title).text(name);
 				
-				var url = "url(https://s3-eu-west-1.amazonaws.com/meetin/";
+				var url = "url(http://folk.uio.no/stiako/images/";
 				
 				if(data[i][j].requester != null) {
 					var hostName = data[i][j].requester;

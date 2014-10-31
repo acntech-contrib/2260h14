@@ -66,13 +66,13 @@ var beaconCaller = setInterval(function(){findBeacons();}, 200);
 
 //Scans the enviroment for iBeacons
 function findBeacons() {
+	var room = "";
 	/*[] values;
 	for(var i=0;i>10;i++) {*/
 		Beacon.rangeForBeacons("B9407F30-F5F8-466E-AFF9-25556B57FE6D")
 		.then(function(beacons_found) {
 		 //  $("#beacon-list").empty();
 		   var maxRSSI = 100;
-		   var room = "";
 		   for(beaconIndex in beacons_found) {
 		      var beacon = beacons_found[beaconIndex];              
 		   /*   var beaconDiv = $("<div />").html("Major: " + beacon.major + 

@@ -39,7 +39,7 @@ $.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 			$(contactStatus).text(data[i].userstatus);*/
 			
 			var contactPicture = contact.concat("Picture");
-			var url = "url(https://s3-eu-west-1.amazonaws.com/meetin/";
+			var url = "url(http://folk.uio.no/stiako/images/";
 			var profilepic = ""+data[i].profilepic;
 			var urlUser = url.concat(profilepic);
 			var urlString = urlUser.concat(".jpg)");
