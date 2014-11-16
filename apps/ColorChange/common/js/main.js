@@ -4,7 +4,7 @@ var pageHistory = [];
 var currentPage = {};
 var path = "";
 var user;
-var picPrefix = "url(https://s3-eu-west-1.amazonaws.com/meetin/";
+var picPrefix = "url(http://folk.uio.no/stiako/images/";
 
 //Data for new meetIn
 var meetInName = "Group";
@@ -219,6 +219,7 @@ function transformHeader() {
 	
 	$("#back").css("display", "block");
 	$("#ok").css("display", "block");
+	$("#ok").text("ok");
 }
 
 function transformHeaderOnLocate() {

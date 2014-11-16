@@ -172,14 +172,14 @@ li {
  	max-height: 20px;
 	max-width: auto;
 	float: left;
-	padding: 20px 0 0 10px;
+	padding: 25px 0 0 10px;
 	
 	display: none;
  }
  
   #ok {
 	float: right;
-	padding: 30px 15px 0 0;
+	padding: 35px 15px 0 0;
 	font-weight: bold;
 	font-size: 20px;
 	

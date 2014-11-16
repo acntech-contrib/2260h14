@@ -20,9 +20,12 @@ var extensions = [];
 for(var i=0;extensions.length;i++) {
 	extensions[i] = false;
 }
-$(".attendBtn").css("background-image", "url(images/Gray-radio.png)");
+$(".attendBtn").css("background-image", "url(images/Green-radio.png)");
+$(".attendBtn").css("background-size", "contain");
 $(".maybeBtn").css("background-image", "url(images/Gray-radio.png)");
-$(".notAttendBtn").css("background-image", "url(images/Gray-radio.png)");
+$(".maybeBtn").css("background-size", "contain");
+$(".notAttendBtn").css("background-image", "url(images/Red-radio.png)");
+$(".notAttendBtn").css("background-size", "contain");
 
 var meetID = [];
 //Read all meetIn's related to this user
@@ -73,6 +76,11 @@ $.getJSON('http://meetin.mybluemix.net/listall/'+user, function(data) {
 					else if(hostStatus == "Not attending") {
 						setNotAttending(n);
 					}
+					else {
+						$("#attendBtn"+n).css("background-image", "url(images/Green-radio.png)");
+						$("#maybeBtn"+n).css("background-image", "url(images/Gray-radio.png)");
+						$("#notAttendBtn"+n).css("background-image", "url(images/Red-radio.png)");
+					}
 				}
 				if(data[i][j].receiver != null && typeof(data[i][j].receiver) != 'undefined' && data[i][j].receiver != "") {
 					var inviteName = data[i][j].receiver;
@@ -99,6 +107,11 @@ $.getJSON('http://meetin.mybluemix.net/listall/'+user, function(data) {
 					else if(inviteStatus == "Not attending") {
 						setNotAttending(n);
 					}
+					else {
+						$("#attendBtn"+n).css("background-image", "url(images/Green-radio.png)");
+						$("#maybeBtn"+n).css("background-image", "url(images/Gray-radio.png)");
+						$("#notAttendBtn"+n).css("background-image", "url(images/Red-radio.png)");
+					}
 				}
 				if(data[i][j].receiver2 != null && typeof(data[i][j].receiver2) != 'undefined' && data[i][j].receiver != "") {
 					var inviteName = data[i][j].receiver2;
@@ -124,6 +137,11 @@ $.getJSON('http://meetin.mybluemix.net/listall/'+user, function(data) {
 					}
 					else if(inviteStatus == "Not attending") {
 						setNotAttending(n);
+					}
+					else {
+						$("#attendBtn"+n).css("background-image", "url(images/Green-radio.png)");
+						$("#maybeBtn"+n).css("background-image", "url(images/Gray-radio.png)");
+						$("#notAttendBtn"+n).css("background-image", "url(images/Red-radio.png)");
 					}
 				}
 			//Show container for meetIn 
@@ -221,22 +239,55 @@ function deleteMeetIn(n) {
 
 function setAttending(n) {
 	$("#maybeBtn"+n).css("background-image", "url(images/Gray-radio.png)");
-	$("#notAttendBtn"+n).css("background-image", "url(images/Gray-radio.png)");
-	$("#attendBtn"+n).css("background-image", "url(images/Gray-radio-selected.png)");
+	/*$("#maybeBtn"+n).css("max-width", "20px");
+	$("#maybeBtn"+n).css("max-height", "auto");
+	$("#maybeBtn"+n).css("line-height", "20px");*/
+	
+	$("#notAttendBtn"+n).css("background-image", "url(images/Red-radio.png)");
+	/*$("#notAttendBtn"+n).css("max-width", "20px");
+	$("#notAttendBtn"+n).css("max-height", "auto");
+	$("#notAttendBtn"+n).css("line-height", "20px");*/
+	
+	$("#attendBtn"+n).css("background-image", "url(images/Green-radio-selected.png)");
+	/*$("#attendBtn"+n).css("max-width", "21px");
+	$("#attendBtn"+n).css("max-height", "auto");
+	$("#attendBtn"+n).css("line-height", "21px");*/
 	updateMeetIn("Attending", n); 
 }
 
 function setMaybe(n) {
-	$("#attendBtn"+n).css("background-image", "url(images/Gray-radio.png)");
-	$("#notAttendBtn"+n).css("background-image", "url(images/Gray-radio.png)");
+	$("#attendBtn"+n).css("background-image", "url(images/Green-radio.png)");
+	/*$("#attendBtn"+n).css("max-width", "20px");
+	$("#attendBtn"+n).css("max-height", "auto");
+	$("#attendBtn"+n).css("line-height", "20px");*/
+	
+	$("#notAttendBtn"+n).css("background-image", "url(images/Red-radio.png)");
+	/*$("#notAttendBtn"+n).css("max-width", "20px");
+	$("#notAttendBtn"+n).css("max-height", "auto");
+	$("#notAttendBtn"+n).css("line-height", "20px");*/
+	
 	$("#maybeBtn"+n).css("background-image", "url(images/Gray-radio-selected.png)");
+	/*$("#maybeBtn"+n).css("max-width", "21px");
+	$("#maybeBtn"+n).css("max-height", "auto");
+	$("#maybeBtn"+n).css("line-height", "21px");*/
 	updateMeetIn("Maybe", n);
 }
 
 function setNotAttending(n) {
-	$("#attendBtn"+n).css("background-image", "url(images/Gray-radio.png)");
+	$("#attendBtn"+n).css("background-image", "url(images/Green-radio.png)");
+	/*$("#attendBtn"+n).css("max-width", "20px");
+	$("#attendBtn"+n).css("max-height", "auto");
+	$("#attendBtn"+n).css("line-height", "20px");*/
+	
 	$("#maybeBtn"+n).css("background-image", "url(images/Gray-radio.png)");
-	$("#notAttendBtn"+n).css("background-image", "url(images/Gray-radio-selected.png)");
+	/*$("#maybeBtn"+n).css("max-width", "20px");
+	$("#maybeBtn"+n).css("max-height", "auto");
+	$("#maybeBtn"+n).css("line-height", "20px");*/
+	
+	$("#notAttendBtn"+n).css("background-image", "url(images/Red-radio-selected.png)");
+	/*$("#notAttendBtn"+n).css("max-width", "21px");
+	$("#notAttendBtn"+n).css("max-height", "auto");
+	$("#notAttendBtn"+n).css("line-height", "21px");*/
 	updateMeetIn("Not attending", n);
 }
 

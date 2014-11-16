@@ -9,16 +9,16 @@ body {
 	height: 60px;
 	font-size: 16px;
 	border-top-style: solid;
-	border-top-color: rgb(180, 180, 180);
+	border-top-color: rgb(210, 210, 210);
 	border-top-width: 1px;
 	border-bottom-style: solid;
-	border-bottom-color: rgb(180, 180, 180);
+	border-bottom-color: rgb(210, 210, 210);
 	border-bottom-width: 1px;
 	border-left-style: solid;
-	border-left-color: rgb(180, 180, 180);
+	border-left-color: rgb(210, 210, 210);
 	border-left-width: 1px;
 	border-right-style: solid;
-	border-right-color: rgb(180, 180, 180);
+	border-right-color: rgb(210, 210, 210);
 	border-right-width: 1px;
 	display: none;
 }
@@ -89,6 +89,8 @@ body {
 .attendBtn {
 	/*font: normal normal normal 1em/1.2em Arial, sans-serif;
 	padding:0.60em 0 0.8em 2.5em; flyttaNerText ? avståndNedåt avståndVänster*/
+	max-width: 20px;
+	max-height: auto;
   	margin-bottom: 25px;
   	padding-left: 25px;
   	padding-top: 2px;
@@ -98,11 +100,16 @@ body {
   	list-style:none;
   	background-repeat:no-repeat;
   	color: rgb(87, 87, 87);
+  	
+  	line-height: 20px;
+	white-space: nowrap;
 }
 
 .maybeBtn {
 	/*font: normal normal normal 1em/1.2em Arial, sans-serif;
 	padding:0.60em 0 0.8em 2.5em; flyttaNerText ? avståndNedåt avståndVänster*/
+	max-width: 20px;
+	max-height: auto;
   	margin-bottom: 25px;
   	padding-left: 25px;
   	padding-top: 2px;
@@ -112,11 +119,16 @@ body {
   	list-style:none;
   	background-repeat:no-repeat;
   	color: rgb(87, 87, 87);
+	
+	line-height: 20px;
+	white-space: nowrap;
 }
 
 .notAttendBtn {
 	/*font: normal normal normal 1em/1.2em Arial, sans-serif;
 	padding:0.60em 0 0.8em 2.5em; flyttaNerText ? avståndNedåt avståndVänster*/
+	max-width: 20px;
+	max-height: auto;
   	margin-bottom: 25px;
   	padding-left: 25px;
   	padding-top: 2px;
@@ -126,6 +138,9 @@ body {
   	list-style:none;
   	background-repeat:no-repeat;
   	color: rgb(87, 87, 87);
+  	
+  	line-height: 20px;
+	white-space: nowrap;
 }
 
 .inviteList {

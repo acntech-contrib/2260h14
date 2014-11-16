@@ -22,7 +22,7 @@ function changeProfile() {
 	$.getJSON('http://meetin.mybluemix.net/userlist', function(data) {
 		for(var i=0;i<data.length;i++) {
 			if(data[i].username == thisUser) {
-				var url = "url(https://s3-eu-west-1.amazonaws.com/meetin/";
+				var url = "url(http://folk.uio.no/stiako/images/";
 				var profilepic = ""+data[i].profilepic;
 				var urlUser = url.concat(profilepic);
 				var urlString = urlUser.concat(".jpg)");
