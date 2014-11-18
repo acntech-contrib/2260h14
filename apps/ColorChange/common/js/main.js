@@ -46,7 +46,7 @@ function wlCommonInit(){
 	$("#grayRadio").css("background-image", "url(images/Blue-radio.png)");
 	
 	//Test text-variabel "Location"
-	$("#myLocation").text("Location");
+	$("#myLocation").text("");
 	$("#myStatus").text("Available");
 }
 
@@ -86,10 +86,14 @@ function findBeacons() {
 		      }
 		    }
 		   $("#myLocation").text(/*"Ole Johan Dahls Hus" + */room);
+		   if(room == "") {
+			   setOffline();
+		   }
 		   newLocation(room);
 		})
 		.fail(function() {
-		    alert("failed!");
+		    alert("failed serching for beacons!");
+		    setOffline();
 		});
 	//}
 }
@@ -182,6 +186,10 @@ function setIncognito() {
 	$("#redRadio").css("background-image", "url(images/Red-radio.png)");
 	$("#grayRadio").css("background-image", "url(images/Blue-radio-selected.png)");
 	$("#myStatus").text("Incognito");
+	newStatus("Incognito");
+}
+
+function setOffline() {
 	newStatus("Incognito");
 }
 
